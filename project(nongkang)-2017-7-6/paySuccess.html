@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>支付成功</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/paySuccess.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">支付成功<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="success">
+			<ul>
+				<li class="icon"><img src="img/success.png"/></li>
+				<li class="successText">预约成功</li>
+				<li class="guessLike"><i class="line"></i><p><span class="xin"><img src="img/xin.png"/></span>您可能还喜欢</p><i class="line"></i></li>
+			</ul>
+		</section>
+		<section class="fruitsList">
+			<ul>
+				<li>
+					<dl>
+						<dt><img src="img/fruits1.jpg"/></dt>
+						<dd>烟巷 新鲜水果莱阳雪梨苹果 12-15个 5kg</dd>
+						<dd class=""><span>&yen;&nbsp;25.8</span><s>&yen; 50.0</s></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="img/fruits1.jpg"/></dt>
+						<dd>烟巷 新鲜水果莱阳雪梨苹果 12-15个 5kg</dd>
+						<dd class=""><span>&yen;&nbsp;25.8</span><s>&yen; 50.0</s></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="img/fruits1.jpg"/></dt>
+						<dd>烟巷 新鲜水果莱阳雪梨苹果 12-15个 5kg</dd>
+						<dd class=""><span>&yen;&nbsp;25.8</span><s>&yen; 50.0</s></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="img/fruits1.jpg"/></dt>
+						<dd>烟巷 新鲜水果莱阳雪梨苹果 12-15个 5kg</dd>
+						<dd class=""><span>&yen;&nbsp;25.8</span><s>&yen; 50.0</s></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="img/fruits1.jpg"/></dt>
+						<dd>烟巷 新鲜水果莱阳雪梨苹果 12-15个 5kg</dd>
+						<dd class=""><span>&yen;&nbsp;25.8</span><s>&yen; 50.0</s></dd>
+					</dl>
+				</li>
+			</ul>
+		</section>
+		
+		
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.fruitsList').on('singleTap',function(){
+					window.location="goods-detail.html";
+				})
+			})
+		</script>
+	</body>
+</html>

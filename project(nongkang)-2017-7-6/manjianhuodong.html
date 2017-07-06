@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>满减活动</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/manjianhuodong.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">满减活动<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<!--轮播图-->
+		<section class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+				</div>
+				<!--分页器-->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="discount">
+			<!--<div class="top"><i></i><span>商品推荐</span></div>-->
+			<ul>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>满减活动</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p class="commit">满100减50</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><span class="right">立刻下单</span></div>
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>满减活动</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p class="commit">满100减50</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><span class="right">立刻下单</span></div>
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>满减活动</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p class="commit">满100减50</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><span class="right">立刻下单</span></div>
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>满减活动</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p class="commit">满100减50</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><span class="right">立刻下单</span></div>
+				</li>
+				
+			</ul>
+		</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var isSlide=false;
+				var myswiper=new Swiper('.banner .swiper-container',{
+					direction:'horizontal',
+					loop:'false',
+					pagination:'.banner .swiper-pagination',
+					autoplay:2000,
+					onTouchMove:function(){
+						isSlide=true;
+					},
+					onTouchEnd:function(){
+						setTimeout(function(){
+							isSlide=false;
+						},300)
+					}
+				})
+				//点击跳到商品详情
+				$('.discount li').on('singleTap',function(){
+					window.location="goods-detail.html";
+				})
+				$('.banner .swiper-slide').on('singleTap',function(){
+					if(isSlide==false){
+						window.location="goods-detail.html";
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

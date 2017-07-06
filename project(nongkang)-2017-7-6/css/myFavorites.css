@@ -1,0 +1,100 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+body{
+	background: #f1f1f1;
+}
+/*收藏类别*/
+.favoriteList{
+	width:100%;
+	height:0.8rem;
+	line-height: 0.8rem;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	top: 0.9rem;
+	z-index: 3;
+}
+.favoriteListFill{
+	width:100%;
+	height:0.8rem;
+}
+.favoriteList ul{
+	width: 100%;
+	height:100%;
+	display: flex;
+	background: #4ba60f;
+	justify-content: space-between;
+}
+.favoriteList ul li{
+	width: 2.49rem;
+	border-right: 0.02rem solid #fff;
+	height:100%;
+}
+.favoriteList ul li:last-child{
+	border-right: 0;
+}
+.favoriteList ul .active{
+	color: #333;
+	background: #fff;
+}
+/*商品列表*/
+.goodsList{
+	width:100%;
+	background: #f1f1f1;
+	overflow: hidden;
+}
+.goodsList ul{
+	width:100%;
+	
+}
+.goodsList ul li{
+	background: #fff;
+	margin-bottom:0.1rem;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.goodsList .liWrap{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+.goodsList ul li .pic{
+	width:1.5rem;
+	height:1.5rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+}
+.goodsList ul li .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.goodsList .explain{
+	width:5.3rem;
+	height: 100%;
+	padding: 0 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+}
+.shoppingList .explain p{
+	/*height:0.4rem;*/
+	/*line-height: 0.4rem;*/
+	font-size: 0.28rem;
+}
+.goodsList .explain .middle{
+	color: #999;
+	font-size: 0.24rem;
+	margin: 0.09rem 0;
+}
+.goodsList .explain p:last-child{
+	color: #4ba60f;
+	margin-top: 0.25rem;
+}
+.goodsList .explain i{
+	margin:0 0.2rem 0 0.1rem; 
+}

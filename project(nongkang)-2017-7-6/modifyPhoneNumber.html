@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>修改手机号</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/modifyPhoneNumber.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">修改手机号<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="modify ">
+			<ul>
+				<li><p><i>新手机号码</i><input type="text" name="" id=""  class="pNum" /></p></li>
+				<li><p><i>验证码</i><input type="text" name="" id=""  class="checkCode" /></p><span class="get">获取验证码</span></li>
+				<li><p><i>密码</i><input type="password" name="" id=""  class="passWord" /></p></li>
+			</ul>
+		</section>
+		<section class="submit" disabled="disabled">提交</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var timer=null;
+				var num=60;
+				$('.get').on('singleTap',function(){
+					$('.get').css({background:'#ccc'});
+					clearInterval(timer)
+					timer=setInterval(function(){
+						num--;
+						$('.get').css({background:'#ccc'}).html('<i>'+num+'</i>s后再获取');
+						if(num==0){
+							$('.get').css({background:'#4ba60f'}).html('获取验证码');
+							clearInterval(timer);
+						}
+						console.log(num)
+					},1000)
+				})
+				$('.submit').on('singleTap',function(){
+					if($('.pNum').val()&&$('.checkCode').val()&&$('.passWord').val()){
+						alert('sdf')
+					}else{
+						alert('请检查信息是否填写完整')
+					}
+					
+				})
+				
+			})
+		</script>
+		
+	</body>
+</html>
+

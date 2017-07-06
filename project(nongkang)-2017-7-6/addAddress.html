@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>添加收货地址</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/addAddress.css"/>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">添加收货地址<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="addressInfo">
+			<ul>
+				<li><p><i>收货人姓名</i><input type="text"  /></p></li>
+				<li><p><i>手机号码</i><input type="text"  /></p></li>
+				<li><p><i>所在区域</i><b class="b1">广东</b><b class="b2">广州市</b><b class="b3">白云区</b></p><span class="chooseArea">请选择<em></em></span></li>
+				<li><p><i>详细地址</i><input type="text"/></p></li>
+				<li><p><i>设为默认地址</i></p><span class="setDufault"></span></li>
+			</ul>
+		</section>
+		<section class="area">
+			<div id="">
+				<ul class="province">
+					<li class="active">广东</li>
+					<li>广西</li>
+					<li>湖南</li>
+					<li>湖北</li>
+					<li>湖北</li>
+					<li>湖北</li>
+				</ul>
+				<ul class="city">
+					<li class="active">广州</li>
+					<li>佛山</li>
+					<li>顺德</li>
+					<li>湛江</li>
+					<li>湛江</li>
+					<li>湛江</li>
+				</ul>
+				<ul class="qu">
+					<li class="active">天河</li>
+					<li>白云</li>
+					<li>越秀</li>
+					<li>海珠</li>
+					<li>海珠</li>
+					<li>海珠</li>
+				</ul>
+			</div>	
+			<p><span class="sure">确认</span></p>
+		</section>
+		<script type="text/javascript">
+			
+			var vm=new Vue({
+				el:'.area',
+				data{
+					qu:['']
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+		
+		
+		<section class="botFill"></section>
+		<footer id="footer" class="save"><a href="manageAddress.html">保存</a></footer>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//设置默认收货地址
+				$('.setDufault').on('singleTap',function(){
+					document.cookie='class=active'
+					$(this).toggleClass('active');
+				})
+				
+				
+				var arr=[];//装载选择的三个地区
+				$('.chooseArea').on('singleTap',function(){
+					$('.area').show();
+				})
+				$('.area li').on('singleTap',function(){
+					arr.length=0;
+					$(this).addClass('active').siblings().removeClass('active');
+				})
+				$('.area .sure').on('singleTap',function(){
+					var li=$('.area li');
+					var len=li.length;
+					console.log(len)
+					for(var i=0;i<len;i++){
+						if(li.eq(i).hasClass('active')){
+							arr.push(li.eq(i).text())
+						}
+					}
+					console.log(arr)
+						for(var i=0;i<arr.length;i++){
+						console.log(i)
+						$('.addressInfo b').eq(i).text(arr[i])
+					}
+					$('.area').hide();
+				})
+				
+				
+			})
+		</script>
+	</body>
+</html>

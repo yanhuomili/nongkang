@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>发表评论</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/comment.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">发表评论<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="discribe">
+			<div class="top">
+				<i><img src="img/heaPic.png"/></i>
+				<textarea placeholder="长度在5-125字中间，您可以将自己的感受和大家分享一下（^_^)" rows="" cols=""></textarea>
+			</div>
+			<div class="bot">
+				<div class="camera"><input type="file" class="file" multiple/></div>
+			</div>
+		</section>
+		<section class="productDiscribe">
+			<span>产品描述:</span>
+			<ol id="box">
+				<li class="b1"></li>
+				<li class="b1"></li>
+				<li class="b1"></li>
+				<li class="b1"></li>
+				<li class="b1"></li>
+			</ol>	
+		</section>
+		
+		<section class="botFill"></section>
+		<section class="submit">提交</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				$('.camera .file').on('change',function(){
+					var f=this.files;//获取问价对象
+					var len=f.length;//获取文件个数
+					console.log(f)
+					for(var i=0;i<len;i++){
+						var read=new FileReader();//实例化文件读取对象
+						read.readAsDataURL(f[i]);//通过循环去读取每个文件里面的url
+						read.onload=function(){//等待里面的文件内容加载完后，将图片渲染到页面上
+							var Img=$('<img class="picture"/>');
+							Img[0].src=this.result;//这里需要转换成原生对象去添加路径
+							$('.camera').before(Img);
+						}
+					}
+					
+				})
+				
+				
+				//评价
+				var b1=document.querySelectorAll('.b1');
+				var len=$('.b1').length;
+				for(var i=0;i<len;i++){
+					b1[i].index=i;
+					b1[i].onclick=function(ev){
+						index=this.index;
+						for(var i=0;i<=index;i++){
+							b1[i].className='b1 b2'
+						}
+						for(var i=index+1;i<len;i++){
+							b1[i].className='b1'
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

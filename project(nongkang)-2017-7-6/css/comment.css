@@ -1,0 +1,115 @@
+body{
+	background: #f1f1f1;
+}
+.discribe{
+	width:100%;
+	height:3.75rem;
+	background: #fff;
+}
+.discribe .top{
+	width:100%;
+	height:2.18rem;
+	margin-bottom: 0.01rem;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.discribe .top i{
+	display: inline-block;
+	width:1.2rem;
+	height:1.2rem;
+	border-radius: 0.05rem;
+}
+.discribe .top textarea{
+	width:5.4rem;
+	height:100%;
+	border: 0;
+	outline: 0 none;
+	font-size: 0.28rem;
+	resize: none;
+}
+.discribe .bot{
+	width:100%;
+	height:1.57rem;
+	padding: 0.1rem 0 0.25rem 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.camera{
+	width:1.16rem;
+	height:1.16rem;
+	border: 0.02rem solid #e3e3e3;
+	background: url(../img/camera.png) no-repeat center center;
+	background-size: 0.54rem 0.46rem;
+	position: relative;
+}
+.camera input{
+	width:100%;
+	height:100%;
+	display: block;
+	/*visibility: hidden;*/
+	opacity: 0;
+	position: absolute;
+	top: 0;
+}
+.createI{
+	width:0.32rem;
+	height:0.32rem;
+	position:absolute;
+	top: -0.16rem;
+	right: -0.16rem;
+	background: url(../img/delImg.png) no-repeat center center;
+	background-size: 0.32rem;
+}
+.picture{
+	width:1.16rem;
+	height:1.16rem;
+	border: 0.01rem solid #ccc;
+	margin: 0 0.1rem;
+}
+
+
+.productDiscribe{
+	width:100%;
+	height:1.2rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	background: #fff;
+	font-size: 0.32rem;
+}
+.b1{
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-left: 0.45rem;
+	float: left;
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.5rem ;
+}
+.b2{
+	background: url(../img/orangeStar.png) no-repeat center center;
+	background-size: 0.5rem;
+}
+
+
+
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:0.9rem;
+}
+.submit{
+	width:100%;
+	height:0.9rem;
+	line-height: 0.9rem;
+	text-align: center;
+	background: #4BA60F;
+	color: #fff;
+	font-size: 0.32rem;
+	position: fixed;
+	bottom: 0;
+}	

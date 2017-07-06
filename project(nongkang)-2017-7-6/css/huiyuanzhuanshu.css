@@ -1,0 +1,235 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+.tip{
+	width:100%;
+	height:0.9rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	background: #4ba60f;
+	font-size: 0.3rem;
+}
+.tip .edit{
+	width:0.98rem;
+	height:0.5rem;
+	border: 0.02rem solid #fff;
+	border-radius: 0.1rem;
+	line-height: 0.5rem;
+	text-align: center;
+}
+/*供货单列表*/
+.supplyList{
+	width:100%;
+	height:0.92rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #666;
+}
+.supplyList .list{
+	display: inline-block;
+	width:0.38rem;
+	height:0.38rem;
+	margin-right:0.15rem;
+	background: url(../img/list.png) no-repeat center center;
+	background-size:0.38rem;
+}
+/*商品列表*/
+.shoppingList{
+	width:100%;
+}
+.shoppingList ul{
+	width:100%;
+}
+.shoppingList ul li{
+	height:2.12rem;
+	border-top: 0.02rem solid #f1f1f1;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.shoppingList .liWrap{
+	width:100%;
+	overflow: hidden;
+}
+.shoppingList ul li .pic{
+	width:1.5rem;
+	height:1.5rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+	overflow: hidden;
+}
+.shoppingList ul li .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.shoppingList .explain{
+	width:5.3rem;
+	padding: 0 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+}
+.shoppingList .explain p{
+	line-height: 0.4rem;
+}
+.shoppingList .explain p:first-child{
+	height:0.8rem;
+	overflow: hidden;
+}
+.shoppingList .explain p:last-child{
+	margin-top: 0.2rem;
+	color: #4ba60f;
+	font-size: 0.28rem;
+}
+.shoppingList .explain i{
+	margin:0 0.2rem 0 0.1rem; 
+}
+.shoppingList .explain b{
+	font-weight: normal;
+	margin-left: 0.2rem;
+	padding: 0 0.2rem;
+	position: relative;
+	color: #666;
+	font-style: none;
+	font-size: 0.2rem;
+}
+.shoppingList .explain em{
+	width:0.6rem;
+	height: 0.6rem;
+	background-size: 0.6rem 0.59rem !important;
+	margin-top:-0.09rem ;
+	background: url(../img/buyCar.png) no-repeat center center;
+}
+
+
+/*规格列表*/
+.spec{
+	width:100%;
+	height:5.78rem;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	display: none;
+}
+.spec .pad{
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+}
+
+.spec .top{
+	height:1.51rem;
+}
+.spec .top .pic{
+	width: 1.48rem;
+	height:1.48rem;
+	border: 0.01rem solid #dbdbdb;
+	border-radius: 0.05rem;
+	margin-top: -0.3rem;
+}
+.spec .top .pic img{
+	border-radius: 0.05rem;
+}
+.spec .top .mid{
+	width:4.5rem;
+	padding: 0.25rem 0 0 0.25rem;
+	box-sizing: border-box;
+	color: #666;
+}
+.spec .top .mid p:first-child{
+	color: #4ba60f;
+	margin-bottom: 0.2rem;
+}
+.spec .top .mid span{
+	color: #999999;
+	font-size: 0.2rem;
+	margin-left: 0.4rem;
+}
+.spec .top .close{
+	width:0.42rem;
+	height:0.6rem;
+	background: url(../img/close.png) no-repeat center center;
+	background-size: 0.42rem 0.6rem;
+}
+.spec>.mid{
+	height:2.2rem;
+	box-sizing: border-box;
+	border-top: 0.01rem solid #e3e3e3;
+	border-bottom: 0.01rem solid #e3e3e3;
+}
+.spec>.mid .food{
+	width:1.5rem;
+	height:100%;
+	padding-top: 0.4rem;
+	box-sizing: border-box;
+}
+.spec>.mid .weight{
+	width:4.3rem;
+	height:100%;
+	padding-top: 0.3rem;
+	box-sizing: border-box;
+}
+.spec>.mid .weight li{
+	width: 1.71rem;
+	height:0.6rem;
+	border: 0.02rem solid #999;
+	border-radius: 0.05rem;
+	text-align: center;
+	line-height: 0.6rem;
+	margin: 0 0.2rem 0.3rem;
+	float: left;
+	color: #999;
+}
+.spec .bot{
+	height:1.08rem;
+	line-height: 1.08rem;
+	font-size: 0.3rem;
+}
+.spec .bot p{
+	height:0.32rem;
+}
+	
+.spec .bot span{
+	display: inline-block;
+	width:0.5rem;
+	text-align: center;
+}
+.spec .bot i{
+	display: inline-block;
+	width:0.5rem;
+	height:100%;
+}
+.spec .bot i:nth-of-type(1){
+	background: url(../img/jian.png) no-repeat center center;
+	background-size: 0.3rem 0.09rem;
+}
+.spec .bot i:nth-of-type(2){
+	background: url(../img/jia.png) no-repeat center center;
+	background-size: 0.32rem 0.32rem;
+}
+.spec .operation{
+	width: 100%;
+	height:1rem;
+	color: #fff;
+	text-align: center;
+}
+.spec .operation .joinCar{
+	width:50%;
+	line-height: 1rem;
+	background: #60af2f;
+}
+.spec .operation .buyNow{
+	width:50%;
+	line-height: 1rem;
+	background: #417d1a;
+	
+}

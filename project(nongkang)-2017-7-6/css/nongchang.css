@@ -1,0 +1,260 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+.search{
+	width:100%;
+	height:0.94rem;
+	padding: 0.17rem 0.3rem;
+	box-sizing: border-box;
+	background: #f1f1f1;
+	position: fixed;
+	z-index: 4;
+}
+.searchFill{
+	height:0.94rem;
+}
+.search input{
+	width:100%;
+	height: 100%;
+	outline: 0 none;
+	border: 0.01rem solid #dadada;
+	border-radius: 0.05rem;
+	font-size: 0.24rem;
+	text-indent: 0.55rem;
+	background: url(../img/s.png) no-repeat -2.65rem -2.15rem;
+	background-size: 7.2rem 8rem;
+}
+/*分类*/
+.fenlei{
+	width:100%;
+	height: 0.82rem;
+	position: fixed;
+	z-index: 3;
+	background: #fff;
+}
+.fenleiFill{
+	height:0.82rem;
+}
+.fenlei>div{
+	width:50%;
+	height: 100%;
+	border-bottom:0.02rem solid #ddd ;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: #333;
+}
+.fenlei .active1{
+	border-color: #4ba60f;
+	color: #4ba60f;
+}
+.fenlei>div p{
+	display: inline-block;
+	text-align: center;
+	width:100%;
+	height:0.5rem;
+	line-height: 0.5rem;
+}
+.fenlei .left p{
+	border-right: 0.02rem solid #ddd;
+	
+}
+.fenlei p span{
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+.fenlei p span i{
+	width:0.22rem;
+	height:100%;
+	position: absolute;
+	background: url(../img/sanjiao2.png) no-repeat center center;
+	background-size: 0.18rem 0.11rem !important;
+}
+.fenlei p span .active{
+	background: url(../img/sanjiao1.png) no-repeat center center;
+}
+/*地址下拉*/
+.fenlei .place{
+	width:7rem;
+	position: absolute;
+	top: 0.83rem;
+	left: 0.3rem;
+	display: flex;
+	justify-content: space-between;
+	color: #000 !important;
+	visibility: hidden;
+	z-index: 3;
+}
+.fenlei .show{
+	visibility: visible;
+}
+.fenlei .place ul{
+	background: #f1f1f1;
+}
+.fenlei .place .active2{
+	background: #949494;
+}
+.fenlei .place li{
+	height:0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+}
+.fenlei .place .province{
+	width:3.5rem;
+}
+.fenlei .place .city{
+	width:1.3rem;
+}
+.fenlei .place .count{
+	width:2rem;
+}
+.fenlei .right .downList{
+	width:2rem;
+	text-align: center;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	z-index: 100;
+}
+.fenlei .right .downList h3{
+	width: 100%;
+	height:0.6rem;
+	line-height:0.6rem;
+	background: #949494;
+	font-weight: normal;
+	color: #fff;
+	font-size: 0.28rem;
+	
+}
+.fenlei .right .downList ul{
+	width:100%;
+	background: #f1f1f1;
+	color: #666;
+	z-index: 999;
+}
+.fenlei .right .downList ul li{
+	width: 100%;
+	height:0.6rem;
+	line-height: 0.6rem;
+	font-size: 0.28rem;
+	
+}
+.fenlei .right .downList .active3{
+	background:#949494;
+}
+
+/*商品列表*/
+.shoppingList{
+	width:100%;
+}
+.shoppingList ul{
+	width:100%;
+}
+.shoppingList ul li{
+	border-bottom: 0.03rem solid #f1f1f1;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.shoppingList .liWrap{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+.shoppingList ul li .pic{
+	width:1.5rem;
+	height:1.5rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+}
+.shoppingList ul li .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.shoppingList .explain{
+	width:5.3rem;
+	height: 100%;
+	padding: 0.08rem 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+}
+.shoppingList .explain p{
+	height:0.4rem;
+	line-height: 0.4rem;
+	font-size: 0.28rem;
+}
+.shoppingList .explain .middle{
+	color: #999;
+	font-size: 0.24rem;
+	margin: 0.09rem 0;
+}
+.shoppingList .explain p:last-child{
+	color: #4ba60f;
+}
+.shoppingList .explain i{
+	margin:0 0.2rem 0 0.1rem; 
+}
+.shoppingList .explain b{
+	font-weight: normal;
+	position: relative;
+	color: #666;
+	font-style: none;
+	font-size: 0.2rem;
+	z-index: -1;
+}
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:0.95rem;
+}
+
+/*底部固定栏*/
+#footer{
+	width:100%;
+	height:0.95rem;
+	position: fixed;
+	bottom: 0;
+	border-top: 0.02rem solid #e5e5e5;
+	background: #fff;
+	z-index: 5;
+}
+#footer ul{
+	width:100%;
+	height:100%;
+	padding: 0.15rem 1.3rem 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+}
+#footer ul li{
+	width:0.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+#footer ul li p{
+	width:100%;
+	height:0.45rem;
+	margin-bottom: 0.05rem;
+	background-size: 7.2rem 8rem !important;
+}
+#footer ul li:nth-child(1) p{
+	background: url(../img/s.png) no-repeat -2.2rem -5.4rem;
+}
+#footer ul li:nth-child(2) p{
+	background: url(../img/s.png) no-repeat -3.63rem -5.4rem;
+}
+#footer ul li:nth-child(3) p{
+	background: url(../img/s.png) no-repeat -5.07rem -5.4rem;
+}
+
+
+
+

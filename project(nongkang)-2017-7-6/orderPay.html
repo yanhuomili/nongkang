@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>订单支付</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/orderPay.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--使用优惠券-->
+		<section class="grayLayout">
+			<div class="discountSheet">
+				<div class="top">
+					<div class="wrap">
+						<div class="pic"><img src="img/cicle.png"/></div>
+						<div class="left">
+							<span class="sureUse"></span>50元
+						</div>
+						<div class="right">
+							<p>满25元可使用</p>
+							<p>有效期:2015-4-1至2017-6-2</p>
+						</div>
+					</div>
+				</div>
+				<div class="bot cancel">
+					取消
+				</div>
+			</div>
+		</section>
+		<!--头部-->
+		<header>
+			<section class="top">订单支付<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="receiverInfo">
+			<div class="location"></div>
+			<ul class="">
+				<li>
+					收货人:<span>猫星人</span><i class="right">151****4544</i>
+				</li>
+				<li>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c</li>
+			</ul>
+			<span class="gt right"></span>
+		</section>
+		<section class="shoppingList">
+			<ul>
+				<li>
+					<p class="shop"><span class="label"></span>不二家</p>
+					<div class="liWrap">
+						<div class="info">
+							<div class="left pic"><img src="img/hz1.jpg"/></div>
+							<div class="left explain">
+								<p>三只松鼠 坚果炒货 零食奶油味</p>
+								<p>属性: <span class="weight">256g/袋</span></p>
+								<p>&yen; 25.8</p>
+							</div>
+						</div>
+						<dl>
+							<dt>
+								<div>购买数量</div>
+								<div class="number"><i class="reduce"></i><span class="num">2</span><i class="add"></i></div>
+							</dt>
+							<dt class="useDiscount">
+								<div>商品优惠券</div>
+								<div><b>&yen;5.00</b><span class="gt"></span></div>
+							</dt>
+							<dt>
+								<div>备注<input type="text"placeholder="选填对本次交易的说明" class="remark"/></div>
+								<div><span class="gt"></span></div>
+							</dt>
+						</dl>	
+						<div class="price">共<span>2</span>件商品 实付:<b>&yen;</b><i>25.8</i></div>
+					</div>	
+				</li>
+			</ul>
+		</section>
+		
+		
+		<section class="botFill"></section>
+		<footer id="footer">
+			<div class="left"><span>实付：<i>&yen;46.5</i></span></div>
+			<div class="right"><a href="paySuccess.html">确认支付</a></div>
+		</footer>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$('.receiverInfo').on('singleTap',function(){
+				window.location="manageAddress.html";
+				
+			})
+			//添加商品数量
+			$('.reduce').on('singleTap',function(){
+				var num=parseInt($('.num').text());
+				num--
+				if(num<0){
+					num=0;
+				}
+				$('.num').text(num);
+			})
+			$('.add').on('singleTap',function(){
+				var num=parseInt($('.num').text());
+				num++
+				$('.num').text(num);
+			})
+			
+			//使用优惠券
+			$('.useDiscount').on('singleTap',function(){
+				$('.grayLayout').show();
+			})
+			$('.discountSheet .sureUse').on('singleTap',function(){
+				if($(this).hasClass('active')){
+					$(this).removeClass('active');
+				}else{
+					$(this).addClass('active');
+					$('.grayLayout').hide();
+				}
+			})
+			$('.cancel').on('singleTap',function(){
+				$('.grayLayout').hide();
+			})
+		</script>
+	</body>
+</html>

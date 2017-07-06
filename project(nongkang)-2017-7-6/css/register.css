@@ -1,0 +1,83 @@
+
+/*填充块*/
+.head{
+	height:0.96rem;
+	background: #f1f1f1;
+}
+
+
+/*手机号密码区域*/
+.info{
+	height:3.97rem;
+	box-sizing: border-box;
+	border-bottom: 0.02rem solid #dcdcdc;
+	border-top: 0.02rem solid #dcdcdc;
+	padding: 0 0.3rem;
+	letter-spacing: 0.02rem;
+	font-size: 0.3rem;	
+}
+.info div{
+	height: 0.98rem;
+	border-bottom: 0.01rem solid #dcdcdc;
+	line-height: 0.99rem;
+}
+.info div:last-child{
+	border-bottom:0;
+}
+.info input{
+	width:60%;
+	outline: 0 none;
+	border: 0;
+	height:0.32rem;
+	font-size: 0.3rem;
+	text-indent: 0.5rem;
+	line-height:0.32rem;
+}
+.info .right{
+	width:1.7rem;
+	height:0.64rem;
+	margin-top: 0.17rem;
+	border-radius: 0.05rem;
+	background: #4BA60F;
+	font-size: 0.26rem;
+	text-align: center;
+	line-height: 0.64rem !important;
+	color: #fff;
+}
+
+
+/*登录部分公共样式*/
+.login{
+	height:7.5rem;
+	box-sizing: border-box;
+	padding: 0.6rem 0.3rem 0;
+	background: #f1f1f1;
+	color: #999;
+}
+.loginBtn{
+	width:100%;
+	outline: 0 none;
+	border: 0;
+	height:0.9rem;
+	background: #4ba60f;
+	border-radius: 0.05rem;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.3rem;
+	margin-bottom: 0.43rem;
+}
+.loginBtn a{
+	color: #fff;
+	display: block;
+}
+.login p span{
+	display: inline-block;
+	width:0.14rem;
+	height:100%;
+	
+}
+.login p a{
+	display: inline-block;
+	text-decoration: underline;
+	color:#f8b551;
+}

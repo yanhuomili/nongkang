@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>限时惠购</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/xianshihuigou.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">限时惠购<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<!--轮播图-->
+		<section class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner.jpg"/></div>
+				</div>
+				<!--分页器-->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="newClass">
+			<!--<div class="top"><i></i><span>商品推荐</span></div>-->
+			<ul>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>限时惠购</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><p>剩余时间:<em class="hours">00</em>:<em class="minute">30</em>:<em class="second">55</em></p><span class="right">立刻下单</span></div>
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>限时惠购</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><p>剩余时间:<em class="hours">00</em>:<em class="minute">30</em>:<em class="second">55</em></p><span class="right">立刻下单</span></div>
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>限时惠购</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><p>剩余时间:<em class="hours">00</em>:<em class="minute">30</em>:<em class="second">55</em></p><span class="right">立刻下单</span></div>
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p><span>限时惠购</span>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>&yen;108</b></p>
+						</div>
+					</div>	
+					<div class="order"><p>剩余时间:<em class="hours">00</em>:<em class="minute">30</em>:<em class="second">55</em></p><span class="right">立刻下单</span></div>
+				</li>
+			</ul>
+		</section>
+	
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var isSlide=false;
+				var myswiper=new Swiper('.banner .swiper-container',{
+					direction:'horizontal',
+					pagination:'.banner .swiper-pagination',
+					loop:true,
+					autoplay:2000,
+					onTouchMove:function(){
+						isSlide=true;
+					},
+					onTouchEnd:function(){
+						setTimeout(function(){
+							isSlide=false;
+						},300)
+						
+					}
+				})
+				//倒计时
+				remainTime();
+				function remainTime(){
+					setInterval(function(){
+						var time1=new Date();
+						var time2=new Date('2017/6/19');
+						var restTime=Math.floor((time2-time1)/1000);
+						var second=double(restTime%60);//剩余的秒数
+						var minute=double(Math.floor(restTime/60%60));
+						var hours=double(Math.floor(restTime/3600));
+						$('.hours').text(hours);
+						$('.minute').text(minute);
+						$('.second').text(second);
+					},1000)
+					
+					
+				}
+				$('.newClass li').on('singleTap',function(){
+					window.location="goods-detail.html";
+				})
+				
+				$('.banner').on('singleTap',function(){
+					if(isSlide==false){
+						window.location="goods-detail.html";
+					}
+				})
+				
+				
+				
+				
+				
+//				补0函数
+				function double(n){
+					return n=n<10?'0'+n:n;
+				}
+			})
+		</script>
+	</body>
+</html>

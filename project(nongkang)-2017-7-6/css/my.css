@@ -1,0 +1,223 @@
+body{
+	background: #f1f1f1;
+}
+.myName{
+	width:100%;
+	height:1.6rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fafafa;
+}
+.myName span{
+	display: inline-block;
+	width:1.2rem;
+	height:1.2rem;
+	border-radius: 50%;
+	overflow:hidden;
+	/*background: url(../img/heaPic.png) no-repeat center center;
+	background-size: 1.2rem;*/
+}
+.myName span a{
+	height:1.2rem;
+}
+.myName div{
+	height:100%;
+}
+.myName div a{
+	display: block;
+	height:100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.myName div i{
+	font-size: 0.2rem;
+	color: #666;
+	margin-top: 0.1rem;
+}
+.myMenu{
+	width:100%;
+	height:1.82rem;
+	padding: 0 0.65rem;
+	box-sizing: border-box;
+	background: #fafafa;
+	margin: 0.16rem 0;
+}
+.myMenu ul{
+	width:100%;
+	height:100%;
+	padding: 0.3rem 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.myMenu ul li{
+	width:0.95rem;
+	height:100%;
+	font-size: 0.23rem;
+	color: #666;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.myMenu ul li:first-child{
+	position: relative;
+}
+.myMenu ul li:first-child i{
+	width:0.3rem;
+	height:0.3rem;
+	line-height: 0.3rem;
+	text-align: center;
+	font-size: 0.24rem;
+	border: 0.02rem solid red;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: absolute;
+	color: red;
+	top: 0;
+	right: 0;
+}
+.myMenu ul li p a{
+	display: block;
+	height:0.8rem;
+}
+.myMenu ul li p{
+	width:0.8rem;
+	height:0.8rem;
+	background-size: 0.8rem !important;
+	margin-bottom: 0.12rem;
+}
+/*.myMenu ul li:nth-of-type(1) p{
+	background: url(../img/my-menu1.png) no-repeat center center;
+}
+.myMenu ul li:nth-of-type(2) p{
+	background: url(../img/my-menu2.png) no-repeat center center;
+}
+.myMenu ul li:nth-of-type(3) p{
+	background: url(../img/my-menu3.png) no-repeat center center;
+}
+.myMenu ul li:nth-of-type(4) p{
+	background: url(../img/my-menu4.png) no-repeat center center;
+}*/
+.function{
+	width:100%;
+	height:5.23rem;
+}
+.function ul{
+	width:100%;
+	height:100%;
+}
+.function ul li{
+	width:100%;
+	height:1rem;
+	margin-bottom: 0.02rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	background: #fafafa;
+}
+.function ul li a{
+	height:100%;
+	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.function ul li span{
+	display: flex;
+	align-items: center;
+}
+.function ul li i{
+	display: inline-block;
+	width:0.42rem;
+	height:0.42rem;
+	margin-right: 0.2rem;
+	background-size: 0.42rem !important;
+	
+}
+.function ul li:nth-of-type(1) i{
+	background: url(../img/function1.png) no-repeat center center;
+}
+.function ul li:nth-of-type(2) i{
+	background: url(../img/function2.png) no-repeat center center;
+}
+.function ul li:nth-of-type(3) i{
+	background: url(../img/function3.png) no-repeat center center;
+}
+.function ul li:nth-of-type(4) i{
+	background: url(../img/function4.png) no-repeat center center;
+}
+.function ul li:nth-of-type(5) i{
+	background: url(../img/function5.png) no-repeat center center;
+}
+.function ul li b{
+	width:0.16rem;
+	height:0.29rem;
+	background: url(../img/gt-h29.png) no-repeat center center;
+	background-size: 0.16rem 0.29rem;
+}
+.function ul .myfavorite{
+	margin-bottom: 0.17rem;
+}
+
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:0.95rem;
+}
+
+/*底部固定栏*/
+#footer{
+	width:100%;
+	height:0.95rem;
+	position: fixed;
+	bottom: 0;
+	border-top: 0.02rem solid #e5e5e5;
+	background: #fff;
+}
+#footer ul{
+	width:100%;
+	height:100%;
+	padding: 0.15rem 1.3rem 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+}
+#footer ul li{
+	width:0.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+#footer ul li p{
+	width:100%;
+	height:0.45rem;
+	margin-bottom: 0.05rem;
+	background-size: 7.2rem 8rem !important;
+}
+#footer ul li:nth-child(1) p{
+	background: url(../img/s.png) no-repeat -2.2rem -5.4rem;
+}
+#footer ul li:nth-child(2) p{
+	background: url(../img/s.png) no-repeat -2.92rem -5.4rem;
+}
+#footer ul li:nth-child(3) p{
+	background: url(../img/s.png) no-repeat -4.36rem -5.4rem;
+}
+
+
+.b1{
+	float: left;
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+.b2{
+	background: url(../img/orangeStar.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+

@@ -1,0 +1,172 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+/*分类*/
+.fenlei{
+	width:100%;
+	height: 0.82rem;
+	color: #333;
+	position: fixed;
+	top: 0.9rem;
+	z-index: 999;
+	background: #fff;
+}
+.fenleiFill{
+	width:100%;
+	height:0.82rem;
+}
+.fenlei>div{
+	width:50%;
+	height: 100%;
+	border-bottom:0.02rem solid #ddd ;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+.fenlei .active{
+	border-color: #4ba60f;
+	color: #4ba60f;
+}
+.fenlei>div p{
+	display: inline-block;
+	text-align: center;
+	width:100%;
+	height:0.5rem;
+	line-height: 0.5rem;
+}
+.fenlei .left p{
+	border-right: 0.02rem solid #ddd;
+}
+.fenlei p span{
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+/*图片展示*/
+.pictures{
+	width:100%;
+}
+.pictures ul{
+	height:100%;
+	background: #fffdfc;
+}
+.pictures ul li{
+	width:100%;
+	margin-bottom: 0.02rem;
+}
+/*参数详情*/
+.paremeter{
+	width: 100%;
+	padding: 0.2rem 0.3rem 0;
+	box-sizing: border-box;
+	color: #999;
+	background: #fefcfa;
+}
+.paremeter h3{
+	font-size: 0.28rem;
+	color: #000;
+}
+.paremeter p{
+	margin: 0.12rem 0;
+} 
+.paremeter p span{
+	color: #000;
+	margin-left: 0.5rem;
+}
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:1rem;
+}
+
+/*底部固定栏*/
+#footer{
+	width:100%;
+	height:1.02rem;
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	border-top: 0.02rem solid #e5e5e5;
+	background: #fff;
+	overflow: hidden;
+	z-index: 999;
+}
+#footer>.left{
+	width: 3.18rem;
+	height:100%;
+	text-align: center;
+	padding-top: 0.3rem;
+	/*overflow: hidden;*/
+}
+#footer .left p{
+	width:0.45rem;
+	height: 0.4rem;
+	margin: -0.15rem auto 0.02rem;
+}
+#footer .store{
+	width:1.58rem;
+	height:0.4rem;
+	border-right: 0.01rem solid #bfbfbf;
+}
+#footer .collect{
+	width:1.58rem;
+	height:0.4rem;
+}
+#footer .store p{
+	background: url(../img/s.png) no-repeat -2.2rem -5.43rem;
+	background-size: 7.2rem 8rem;
+}
+#footer .collect p{
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.45rem 0.4rem;
+}
+#footer .right{
+	width: 4.32rem;
+	height:100%;
+	line-height: 1rem;
+	text-align: center;
+	color: #fff;
+	overflow: hidden;
+}
+#footer .add{
+	width:2.4rem;
+	background: #60af2f;
+}
+#footer .purchase{
+	width:1.92rem;
+	background: #417d1a;
+}
+#footer ul{
+	width:100%;
+	height:100%;
+	padding: 0.15rem 1.3rem 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+}
+#footer ul li{
+	width:0.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+#footer ul li p{
+	width:100%;
+	height:0.45rem;
+	margin-bottom: 0.05rem;
+	background-size: 7.2rem 8rem !important;
+}
+#footer ul li:nth-child(1) p{
+	background: url(../img/s.png) no-repeat -1.5rem -5.4rem;
+}
+#footer ul li:nth-child(2) p{
+	background: url(../img/s.png) no-repeat -5.1rem -5.4rem;
+}
+#footer ul li:nth-child(3) p{
+	background: url(../img/s.png) no-repeat -2.93rem -5.4rem;
+}
+
+
+

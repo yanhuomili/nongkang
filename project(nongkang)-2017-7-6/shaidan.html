@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>晒单</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shaidan.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		
+		<!--头部-->
+		<header>
+			<section class="top">晒单<span class="goBack">返回</span><span class="point menu"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="comment">
+			<div class="orderSheet">
+				<h4>他们在晒（12）</h4>
+				<ul>
+					<li class="left"><img src="img/tx.jpg"/></li>
+					<li class="left">
+						<p>猫星人</p>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>
+					</li>
+					<li class="right">2016-5-24</li>
+				</ul>
+				<p class="text">这个地方没有过去，不知道如何。能够遇见你们，是我最美好的时光。在这里晒单也可以评论，让更多的人看到商品真是的性能，也可以拍照把图片放上来，供其他人参考</p>
+			</div>
+			<div class="orderSheet">
+				<h4>他们在晒（12）</h4>
+				<ul>
+					<li class="left"><img src="img/tx.jpg"/></li>
+					<li class="left">
+						<p>猫星人</p>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>
+					</li>
+					<li class="right">2016-5-24</li>
+				</ul>
+				<p class="text">这个地方没有过去，不知道如何。能够遇见你们，是我最美好的时光。在这里晒单也可以评论，让更多的人看到商品真是的性能，也可以拍照把图片放上来，供其他人参考</p>
+			</div>
+			<div class="orderSheet">
+				<h4>他们在晒（12）</h4>
+				<ul>
+					<li class="left"><img src="img/tx.jpg"/></li>
+					<li class="left">
+						<p>猫星人</p>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>
+					</li>
+					<li class="right">2016-5-24</li>
+				</ul>
+				<p class="text">这个地方没有过去，不知道如何。能够遇见你们，是我最美好的时光。在这里晒单也可以评论，让更多的人看到商品真是的性能，也可以拍照把图片放上来，供其他人参考</p>
+			</div>
+			<div class="orderSheet">
+				<h4>他们在晒（12）</h4>
+				<ul>
+					<li class="left"><img src="img/tx.jpg"/></li>
+					<li class="left">
+						<p>猫星人</p>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>
+					</li>
+					<li class="right">2016-5-24</li>
+				</ul>
+				<p class="text">这个地方没有过去，不知道如何。能够遇见你们，是我最美好的时光。在这里晒单也可以评论，让更多的人看到商品真是的性能，也可以拍照把图片放上来，供其他人参考</p>
+			</div>
+		</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//星星等级评论
+//				$('.box').on('singleTap','li',function(){
+//					var index=$(this).index();
+//					var b1=$(this).parent().children();
+//					console.log(b1)
+//					console.log(index)
+//					$(this).parent().children().addClass('b2');
+//					for(var i=index+1;i<b1.length;i++){
+//						b1.eq(i).removeClass('b2')
+//					}
+//				})
+				
+				
+				var arr=[5,4,2,3]
+				companyRank(arr);
+				function companyRank(arr){
+					var len=$('.orderSheet').length;
+					for(var i=1;i<=len;i++){
+						rank($('.orderSheet:nth-of-type('+i+') .box'),arr[i-1]);
+					}
+					function rank(obj,n){//后台传过来的数据就是星星等级
+						var b1=obj.children();
+						b1.addClass('b2');
+						for(var i=n;i<b1.length;i++){
+							b1.eq(i).removeClass('b2')
+						}
+					}
+				}
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport"/>
+		<title>农场详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nongchang-detail.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--分享-->
+		<section class="grayLayout">
+			<div class="share">
+				<ul class="top">
+					<li><i class="weixin"></i><span>微信好友</span></li>
+					<li><i class="friendCicle"></i><span>朋友圈</span></li>
+					<li><i class="QQFriend"></i><span>QQ好友</span></li>
+					<li><i class="QQSpace"></i><span>QQ空间</span></li>
+					<li><i class="blog"></i><span>新浪微博</span></li>
+				</ul>
+				<div class="bot cancel">取消</div>
+			</div>
+				
+		</section>
+		<!--头部-->
+		<header>
+			<section class="top">农场详情<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<!--轮播图-->
+		<section class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/nongchang.jpg"/></div>
+					<div class="swiper-slide"><img src="img/nongchang.jpg"/></div>
+					<div class="swiper-slide"><img src="img/nongchang.jpg"/></div>
+					<div class="swiper-slide"><img src="img/nongchang.jpg"/></div>
+				</div>
+				<!--分页器-->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="address">
+			<h4>广州绿怡岛农场<i class="right shareTo"></i><em class="right collect"></em></h4>
+			<p>地址: 广州市白云区运城西路58号</p>
+			<p>电话: 021-12545632</p>
+		</section>
+		<section class="introduce">
+			农场介绍
+			<span class="right"></span>
+		</section>
+		<section class="shoppingList">
+			<div class="top"><i></i><span>商品列表</span></div>
+			<ul>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right addCar"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/fruits.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right"></em></p>
+						</div>
+					</div>	
+				</li>
+			</ul>
+		</section>
+		<!--加入购物车-->
+		<section class="spec">
+			<div class="top pad">
+				<div class="left pic"><img src="img/hz3.jpg"/></div>
+				<div class="left mid">
+					<p>&yen; 25.8<span>库存1020件</span></p>
+					<p>已选择: <i class="selected">256/袋</i></p>
+				</div>
+				<div class="right close"></div>
+			</div>
+			<div class="mid pad">
+				<div class="left food">食品原味</div>
+				<ul class="left weight">
+					<li>120/袋</li>
+					<li>256/袋</li>
+					<li>500/袋</li>
+				</ul>
+			</div>
+			<div class="bot pad">购买数量<p class="right"><i class="reduce"></i><span class="total">1</span><i class="increase"></i></p></div>
+			<div class="operation">
+				<div class="left joinCar">加入购物车</div>
+				<div class="right buyNow">立即购买</div>
+			</div>
+		</section>
+		
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var isSlide=false;
+				var myswiper=new Swiper('.banner .swiper-container',{
+					direction:'horizontal',
+					loop:false,
+					pagination:'.banner .swiper-pagination',
+					autoplay:2000,
+					onTouchMove:function(){
+						isSlide=true;
+					},
+					onTouchEnd:function(){
+						setTimeout(function(){
+							isSlide=false;
+						},300)
+					}
+				})
+				
+				//点击小图片进入商品详情
+				$('.shoppingList li').on('singleTap',function(){
+					window.location="goods-detail.html";
+				})
+				
+				
+				//收藏店铺
+				$('.address .collect').on('singleTap',function(){
+					alert('sdsf')
+					if($(this).hasClass('active')){
+						$(this).removeClass('active');
+						alert('取消收藏')
+						console.log('1')
+					}else{
+						$(this).addClass('active');
+						alert('收藏成功')
+						console.log('2')
+					}
+				})
+				//分享
+				$('.address .shareTo').on('singleTap',function(){
+					$('.grayLayout').show();
+				})
+				$('.cancel').on('singleTap',function(){
+					$('.grayLayout').hide();
+				})
+				//分享类型
+				$('.share .top').on('singleTap','li',function(){
+					var index=$(this).index()+1;
+					switch(index){
+						case 1:
+							alert('微信');
+							break;
+						case 2:
+							alert('朋友圈');
+							break;
+						case 3:
+							alert('QQ好友');
+							break;	
+						case 4:
+							alert('QQ空间');
+							break;	
+						case 5:
+							alert('新浪微博');
+							break;	
+						defalult:
+							alert('都不是');
+					}
+					$('.grayLayout').hide();
+//					alert(index)
+				})
+				
+				
+				
+//				//打开规格选择界面
+//				$('.addCar').on('singleTap',function(){
+//					$('.spec').show();
+//				})
+//				//规格选择
+//				$('.guige').on('singleTap',function(){
+//					$('.spec').show();
+//				})
+//				//关闭规格选择
+//				$('.spec .close').on('singleTap',function(){
+//					$('.spec').hide();
+//				})
+//				
+//				//商品重量
+//				$('.weight li').on('singleTap',function(){
+//					$(this).css({'background':'#60af2f','color':'#fff'}).siblings().css({'background':'#fff','color':'#999'})
+//					var val=$(this).html();
+//					$('.selected').html(val)
+////					alert($(this).html())
+//				})
+//				//商品数量
+//				add();
+//				function add(){
+//					var num=0;
+//					$('.increase').on('singleTap',function(){
+//						num++;
+//						$('.total').html(num)
+//						
+//					})
+//					$('.reduce').on('singleTap',function(){
+//						num--;
+//						if(num<=0){
+//							num=0;
+//						}
+//						console.log(num)
+//						$('.total').html(num)
+//					})
+//				}
+//				//加入购物车按钮
+//				$('.joinCar').on('singleTap',function(){
+//					$('.spec').hide();
+//					window.location="shoppingCar.html";
+//				})
+//				//马上购买按钮
+//				$('.buyNow').on('singleTap',function(){
+//					$('.spec').hide();
+//					window.location="orderPay.html";
+//				})
+				
+				
+				$('.banner').on('singleTap',function(){
+					if(isSlide==false){
+						window.location="goods-detail.html";
+					}
+				})
+			
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,147 @@
+body{
+	background: #f1f1f1;
+}
+.tip{
+	width:100%;
+	height:0.9rem;
+	padding: 0 0.3rem 0 0.27rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #4ba60f;
+	font-size: 0.3rem;
+	color: #fff;
+}
+.tip span{
+	width:0.98rem;
+	height:0.5rem;
+	border: 0.02rem solid #fff;
+	text-align: center;
+	line-height: 0.5rem;
+	border-radius: 0.1rem;
+}
+.tip span a{
+	color: #fff;
+}
+.receiver{
+	width:100%;
+	
+	margin-bottom: 0.1rem;
+	
+}
+.receiver ul{
+	width:100%;
+}
+.receiver ul li{
+	width:100%;
+	margin-bottom:0.3rem;
+	background: #fff;
+}
+.receiver dl{
+	width:100%;
+	height:1.82rem;
+	padding: 0.3rem 0.3rem 0;
+	box-sizing: border-box;
+	border-top: 0.01rem solid #e3e3e3;
+	border-bottom: 0.02rem solid #e3e3e3;
+}
+.receiver dl dt{
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.3rem;
+	line-height: 0.4rem;
+	margin-bottom: 0.3rem;
+}
+.receiver dl dd{
+	font-size: 0.24rem;
+	color: #333;
+}
+.receiver .editInfo{
+	width:100%;
+	height:0.9rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.receiver .defaultAddress{
+	display: flex;
+	align-items: center;
+}
+.receiver .defaultAddress .active{
+	background: url(../img/chose1.png) no-repeat center center;
+	background-size: 0.42rem 0.42rem;
+	border: 0 !important;
+}
+.receiver .defaultAddress i{
+	display: inline-block;
+	width:0.42rem;
+	height:0.42rem;
+	margin-right: 0.2rem;
+	border: 0.02rem solid #9b9b9b;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+.receiver .right{
+	height:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.receiver .edit{
+	height: 100%;
+	line-height: 0.9rem;
+	text-indent: 0.55rem;
+	background: url(../img/edit1.png) no-repeat 0 center;
+	background-size: 0.4rem 0.41rem;
+}
+.receiver .del{
+	height: 100%;
+	line-height: 0.9rem;
+	text-indent: 0.55rem;
+	margin-left: 0.2rem;
+	background: url(../img/del1.png) no-repeat 0 center;
+	background-size: 0.4rem 0.41rem;
+}
+/*朦胧层*/
+.grayLayout{
+	width:100%;
+	height:100vh;
+	background: rgba(0,0,0,0.4);
+	position:fixed;
+	z-index: 900;
+	display: none;
+}
+.grayLayout dl{
+	width:5.4rem;
+	height:2.1rem;
+	background: #fff;
+	margin: 4.2rem auto 0;
+	border: 0.01rem solid #d9dbde;
+	border-radius: 0.3rem;
+}
+.grayLayout dl dt{
+	height:1.21rem;
+	border-bottom: 0.02rem solid #d9dbde;
+	text-align: center;
+	line-height: 1.21rem;
+	font-size: 0.32rem;
+}
+.grayLayout dl dd{
+	height:0.88rem;
+	line-height: 0.88rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	
+}
+.grayLayout dl dd .cancel{
+	flex: 1;
+	border-right: 0.02rem solid #d9dbde;
+}
+.grayLayout dl dd .sure{
+	flex: 1;
+}

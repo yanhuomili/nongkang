@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>编辑收货地址</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/editAddress.css"/>
+	</head>
+	<body>
+		<!--地址选择-->
+		<section class="selectArea">
+			<ul class="province">
+				<h2>请选择省</h2>
+				<div class="liFill"></div>
+				<li><span>广东</span><i></i></li>
+				<li><span>广西</span><i></i></li>
+				<li><span>湖南</span><i></i></li>
+			</ul>
+			<ul class="city">
+				<h2>请选择市</h2>
+				<div class="liFill"></div>
+				<li><span>广州</span><i></i></li>
+				<li><span>中山</span><i></i></li>
+				
+				
+			</ul>
+			<ul class="qu">
+				<h2>请选择区</h2>
+				<div class="liFill"></div>
+				<li><span>白云</span><i></i></li>
+				<li><span>天河</span><i></i></li>
+				<li><span>花都</span><i></i></li>
+			</ul>
+		</section>
+		<!--头部-->
+		<header>
+			<section class="top">编辑收货地址<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="addressInfo">
+			<ul>
+				<li><p><i>收货人姓名</i><input type="text"/></p></li>
+				<li><p><i>手机号码</i><input type="text"/></p></li>
+				<li class="region"><p><i>所在区域</i><b class="b1">广东</b><b class="b2">广州市</b><b class="b3">白云区</b></p><span class="chooseArea">请选择<em></em></span></li>
+				<li><p><i>详细地址</i><textarea placeholder="请输入收货地址" rows="" cols=""></textarea></p></li>
+				<li><p><i>设为默认地址</i></p><span class="setDufault"></span></li>
+			</ul>
+		</section>
+		<section class="botFill"></section>
+		<footer id="footer" class="save">修改</footer>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.setDufault').on('singleTap',function(){
+					$(this).toggleClass('active');
+				})
+				
+				
+				//选择地区
+				$('.region').on('singleTap',function(){
+					$('.selectArea').show();
+				})
+				var arr=[];
+				for(var i=0;i<3;i++){
+					(function(index){
+						var li=$('.selectArea').children().eq(index).find('li');
+						var len=li.length;
+						for(var i=0;i<len;i++){
+							li.eq(i).on('singleTap',function(){
+								var val=$(this).find('span').text();
+								arr.push(val);
+								$(this).parent().hide().next().show();
+								if($(this).parent().hasClass('qu')){
+									$(this).parent().hide().parent().hide().children().first().show()
+//									alert(arr);
+									$('.region b').each(function(index,el){
+										$(this).text(arr[index])
+									})
+									arr=[];
+								}
+							})
+						}
+					})(i)
+				}
+				
+				
+				
+//				var arr=[];//装载选择的三个地区
+//				$('.chooseArea').on('singleTap',function(){
+//					$('.area').show();
+//				})
+//				$('.area li').on('singleTap',function(){
+//					arr.length=0;
+//					$(this).addClass('active').siblings().removeClass('active');
+//				})
+//				$('.area .sure').on('singleTap',function(){
+//					var li=$('.area li');
+//					var len=li.length;
+//					console.log(len)
+//					for(var i=0;i<len;i++){
+//						if(li.eq(i).hasClass('active')){
+//							arr.push(li.eq(i).text())
+//						}
+//					}
+//					console.log(arr)
+//						for(var i=0;i<arr.length;i++){
+//						console.log(i)
+//						$('.addressInfo b').eq(i).text(arr[i])
+//					}
+//					$('.area').hide();
+//				})
+//				
+			})
+		</script>
+	</body>
+</html>

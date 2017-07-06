@@ -1,0 +1,130 @@
+body{
+	background: #f1f1f1;
+}
+.addressInfo{
+	width:100%;
+}
+.addressInfo ul{
+	width:100%;
+}
+.addressInfo ul li{
+	width:100%;
+	height:0.99rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	background: #fff;
+	border-top: 0.01rem solid #dcdcdc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.addressInfo ul li p{
+	display: flex;
+	align-items: center;
+}
+.addressInfo ul li p b{
+	margin-right: 0.1rem;
+}
+.addressInfo ul li i{
+	display: inline-block;
+	width:1.8rem;
+}
+.addressInfo ul li input{
+	width:3rem;
+	height:0.93rem;
+	border: 0;
+	outline: 0 none;
+	font-size: 0.3rem;
+}
+.addressInfo ul li span{
+	/*line-height: 0.98rem;*/
+	display: flex;
+	align-items: center;
+}
+.addressInfo ul li em{
+	display: inline-block;
+	width:0.14rem;
+	height:0.98rem;
+	background: url(../img/lt.png) no-repeat center center;
+	background-size: 0.14rem 0.26rem;
+	margin-left:0.3rem ;
+}
+.addressInfo ul li .setDufault{
+	width:0.42rem;
+	height:0.42rem;
+	border: 0.02rem solid #9b9b9b;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+.addressInfo ul li .active{
+	background: url(../img/chose1.png) no-repeat center center;
+	background-size: 0.46rem 0.46rem;
+	border: 0 !important;
+}
+.botFill{
+	width:100%;
+	height:0.9rem;
+}
+#footer{
+	width:100%;
+	height:0.9rem;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.32rem;
+}
+#footer a{
+	color: #fff;
+	background: #4ba60f;
+}
+
+
+/*添加地址*/
+.area{
+	width:100%;
+	display: none;
+	background: #fff;
+	border: 0.01rem solid #ccc;
+	padding: 0.2rem;
+	box-sizing: border-box;
+	border-radius: 0.1rem;
+	position: fixed;
+	top: 4rem;
+}
+.area>div{
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+.area ul{
+	height:1.48rem;
+	border: 0.01rem solid #ccc;
+	overflow-y: auto;
+}
+.province{
+	width:30%;
+}
+.city{
+	width:30%;
+}
+.qu{
+	width:30%;
+}
+.area .active{
+	background: #ccc;
+}
+.area p{
+	display: flex;
+	justify-content: center;
+}
+.area .sure{
+	display: inline-block;
+	width:2rem;
+	height:0.5rem;
+	background: #FB6878;
+	text-align: center;
+	margin: 0.4rem auto 0;
+	border-radius: 0.1rem;
+}

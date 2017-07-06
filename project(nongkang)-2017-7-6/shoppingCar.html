@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shoppingCar.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<style type="text/css">
+/*			插件的样式必须写在html页面内*/
+			.refreshtip {position: absolute;left: 0;width: 100%;margin: 10px 0;text-align: center;color: #999;}
+			/*溢出可见*/
+			.swiper-container{overflow: visible;}
+			.loadtip { display: block;width: 100%;line-height: 40px; height: 40px;text-align: center;color: #999;border-top: 1px solid #ddd;}
+			.swiper-container, .w{height: calc(100vh - 330px);}
+			/*高度自动*/
+			.swiper-slide{height: auto;}
+			.text-center{text-align: center;}
+			.list-group{padding-left: 0;margin-bottom: 20px;}
+			.list-group-item{position: relative; display: block;padding: 10px 15px;margin-bottom: -1px;background-color: #fff;border: 1px solid #ddd;}
+			.list-group-item:first-child {border-top-left-radius: 4px;border-top-right-radius: 4px;}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+		<!--头部-->
+			<header>
+				<section class="top">购物车<span class="goBack">返回</span><span class="point"></span></section>
+			</header>
+			<section class="headerFill"></section>
+			<section class="edit">
+				<span class="tapMe">自定义下单？戳我？</span><span class="editBtn right">编辑</span>
+			</section>
+			<section class="shoppingList">
+				<div class="swiper-container">
+				<div class="refreshtip">下拉可以刷新</div>
+				<div class="swiper-wrapper w">
+					<div class="swiper-slide d">
+						<div class="init-loading list-group-item text-center" style="display: none;">下拉可以刷新</div>
+						<div class="swiper-container2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide list-group">
+								<ul class="oul">
+													
+									<li v-for="(item,index) in total">
+										<div class="liWrap">
+											<div class="left isSlected" v-bind:class="{active2:item.selected}" @tap="gou(index)"></div>
+											<div class="left pic"><img src="img/hz1.jpg"/></div>
+											<div class="left explain">
+												<p>三只松鼠 坚果炒货 零食奶油味 </p>
+												<p class="attribute">属性: <i>256g/袋</i></p>
+												<div class="bot"><span class="money">&yen;&nbsp;25.8</span><p class="right"><i class="reduce" @tap="reduce(index)" :data="index"></i><span class="total">{{item.a}}</span><i class="increase" @tap="increase(index)"></i></p></div>
+											</div>
+										</div>	
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="loadtip">上拉加载更多</div>
+				<div class="swiper-scrollbar"></div>
+				</div>
+			</section>
+			
+			
+			<section class="botFill"></section>
+			<footer id="footer">
+					<div class="left">
+						<span class="check"><i class="checkall" v-bind:class="{active:test.quanxuan}" @tap="selectedAll"></i>全选</span>
+						<span class="sum">合计:<b>&yen;</b><i>0.00</i></span>
+					</div>
+					<div class="right checkout" @tap="jiesuan">结算（<i class="total">{{sum}}</i>）</div>
+			</footer>
+		</div>	
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var arr=[
+			{a:1,selected:false},
+			{a:1,selected:false},
+			{a:1,selected:false},
+			{a:1,selected:false},
+			{a:1,selected:false}
+			];
+			var ac={
+				total:0,
+				quanxuan:false,
+				len:0,
+			};
+			var vm=new Vue({
+				el:'#wrap',
+				data:{
+					test:ac,
+					selected:true,
+					total:arr,
+					goodsNum:0,
+				},
+				mounted:function(){
+					console.log('数据加载完')
+				},
+				computed:{
+					sum:function(){
+						return this.test.total 
+					}
+				},
+				methods:{
+					increase:function(index){
+						if(this.total[index].selected==true){
+							this.total[index].a++
+							console.log();
+							this.test.total++
+							console.log(this.test.total);
+						}
+					},
+					reduce:function(index){
+						var len=this.total.length;
+						var account=0;
+						if(this.total[index].selected==true){
+							if(this.total[index].a<=1){
+								this.total[index].a=1;
+							}
+							this.total[index].a--;
+						}
+						for(var i=0;i<len;i++){
+							if(this.total[i].selected==true){
+								account+=this.total[i].a;
+							}
+						}
+						this.test.total=account;
+					},
+					gou:function(index){
+						console.log(index);
+						this.total[index].selected=!this.total[index].selected;
+						var num=0;
+						var len=this.total.length;
+						this.test.len=len;
+						var that=this;
+						var account=0;
+						for(var i=0;i<len;i++){
+							if(this.total[i].selected==true){
+								num++
+								account+=this.total[i].a;
+							}
+						}
+						if(num==len){
+							this.test.quanxuan=true;
+						}else{
+							this.test.quanxuan=false;
+						}
+						console.log(this.test.quanxuan,num,len,account)
+						this.test.total=account;
+					},
+					jiesuan:function(){
+						alert(this.test.total)
+					},
+					selectedAll:function(){
+						var account=0;
+						this.test.quanxuan=!this.test.quanxuan;
+						if(this.test.quanxuan==true){
+							for(var i=0;i<this.total.length;i++){
+								this.total[i].selected=true;
+								account+=this.total[i].a;
+							}
+							this.test.total=account;
+						}else{
+							for(var i=0;i<this.total.length;i++){
+								this.total[i].selected=false;
+							}
+							this.test.total=0;
+						}
+						
+					}
+				}
+			});
+				
+				
+			////////////插件js代码/////////////////////////	
+			var loadFlag = true;
+			var oi = 0;
+			var mySwiper = new Swiper('.swiper-container',{
+				direction: 'vertical',
+				scrollbar: '.swiper-scrollbar',
+				slidesPerView: 'auto',
+				mousewheelControl: true,
+				freeMode: true,
+				onTouchMove: function(swiper){		//手动滑动中触发
+					var _viewHeight = document.getElementsByClassName('swiper-wrapper')[0].offsetHeight;
+					var _contentHeight = document.getElementsByClassName('swiper-slide')[0].offsetHeight;
+					console.log(mySwiper.translate)
+					
+					if(mySwiper.translate < 50 && mySwiper.translate > 0) {
+						$(".init-loading").html('下拉刷新...').show();
+					}else if(mySwiper.translate > 50 ){
+						$(".init-loading").html('释放刷新...').show();
+					}
+				},
+				onTouchEnd: function(swiper) {
+					var _viewHeight = document.getElementsByClassName('swiper-wrapper')[0].offsetHeight;
+					var _contentHeight = document.getElementsByClassName('swiper-slide')[0].offsetHeight;
+					 // 上拉加载
+					if(mySwiper.translate <= _viewHeight - _contentHeight - 50 && mySwiper.translate < 0) {
+						 console.log("已经到达底部！");
+					   
+						if(loadFlag){
+							$(".loadtip").html('正在加载...');
+						}else{
+							$(".loadtip").html('没有更多啦！');
+						}
+						
+						setTimeout(function() {
+							for(var i = 0; i <5; i++) {
+//								oi++;
+//								$(".oul").eq(mySwiper2.activeIndex).append('<li class="list-group-item">我是加载出来的'+oi+'...</li>');
+								vm.total.push({a:1,selected:false})
+							}
+							 $(".loadtip").html('上拉加载更多...');
+							 
+							vm.$forceUpdate();//刷新vue里面的数据
+							setTimeout(function(){//在vue里面的数据刷新后才去刷新dom,否则获取不到新的高度
+								mySwiper.update(); // 重新计算高度;
+							},1000)
+							
+							
+						}, 800);
+					}
+					
+					// 下拉刷新
+					if(mySwiper.translate >= 50) {
+						$(".init-loading").html('正在刷新...').show();
+						$(".loadtip").html('上拉加载更多');
+						loadFlag = true;
+						
+						setTimeout(function() {
+							$(".refreshtip").show(0);
+							$(".init-loading").html('刷新成功！');
+							setTimeout(function(){
+								$(".init-loading").html('').hide();
+							},800);
+							$(".loadtip").show(0);
+							
+							//刷新操作
+							mySwiper.update(); // 重新计算高度;
+						}, 1000);
+					}else if(mySwiper.translate >= 0 && mySwiper.translate < 50){
+						$(".init-loading").html('').hide();
+					}
+					return false;
+				}
+			});
+			var mySwiper2 = new Swiper('.swiper-container2',{
+				scrollbarHide:true,
+				onTransitionEnd: function(swiper){
+			//		
+			//		$('.w').css('transform', 'translate3d(0px, 0px, 0px)')
+			//		$('.swiper-container2 .swiper-slide-active').css('height','auto').siblings('.swiper-slide').css('height','0px');
+					mySwiper.update();
+			//		
+			//		$('.tab a').eq(mySwiper2.activeIndex).addClass('active').siblings('a').removeClass('active');
+				}
+				
+			});
+			
+			
+			})
+		</script>
+
+	</body>
+</html>

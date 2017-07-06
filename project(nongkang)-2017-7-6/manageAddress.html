@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>管理地址</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/manageAddress.css"/>
+	</head>
+	<body>
+		<section class="grayLayout">
+			<dl>
+				<dt>您确定要删除吗</dt>
+				<dd>
+					<div class="cancel">取消</div>
+					<div class="sure">确定</div>
+				</dd>
+			</dl>
+		</section>
+		<!--头部-->
+		<header>
+			<section class="top">管理地址<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="tip">
+			<p>亲爱哒，您可以添加新的地址哦</p>
+			<span><a href="addAddress.html">添加</a></span>
+		</section>
+		<section class="receiver">
+			<ul>
+				<li>
+					<dl>
+						<dt>
+							<span>收货人:<i>猫星人</i></span>
+							<span>12345687546</span>
+						</dt>
+						<dd>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c英诺科技</dd>
+					</dl>
+					<div class="editInfo">
+						<div class="defaultAddress"><i></i>默认地址</div>
+						<div class="right">
+							<div class="edit"><a href="editAddress.html">编辑</a></div>
+							<div class="del">删除</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<dl>
+						<dt>
+							<span>收货人:<i>猫星人</i></span>
+							<span>987654321</span>
+						</dt>
+						<dd>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c英诺科技</dd>
+					</dl>
+					<div class="editInfo">
+						<div class="defaultAddress"><i></i>默认地址</div>
+						<div class="right">
+							<div class="edit"><a href="editAddress.html">编辑</a></div>
+							<div class="del">删除</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<dl>
+						<dt>
+							<span>收货人:<i>猫星人</i></span>
+							<span>5555555555</span>
+						</dt>
+						<dd>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c英诺科技</dd>
+					</dl>
+					<div class="editInfo">
+						<div class="defaultAddress"><i></i>默认地址</div>
+						<div class="right">
+							<div class="edit"><a href="editAddress.html">编辑</a></div>
+							<div class="del">删除</div>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+		</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.defaultAddress i').on('singleTap',function(){
+					$(this).addClass('active').parents('li').siblings().find('i').removeClass('active');
+				})
+				
+				
+				//删除
+				delInfo()
+				function delInfo(){
+					var len=$('.receiver li').length;
+					var n;//要删除的地址的序号
+					$('.receiver .del').on('singleTap',function(){
+						n=$(this).parents('li').index();
+						$('.grayLayout').show();
+						console.log(n)
+					})
+					//取消
+					$('.grayLayout .cancel').on('singleTap',function(){
+						console.log('取消');
+						$('.grayLayout').hide();
+					})
+					//确定
+					$('.grayLayout .sure').on('singleTap',function(){
+						console.log('确定');
+						$('.grayLayout').hide();
+						$('.receiver ul li').eq(n).remove();
+					})
+				}
+				
+			})
+		</script>
+	</body>
+</html>

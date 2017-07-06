@@ -1,0 +1,318 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+/*分类*/
+.fenlei{
+	width:100%;
+	height: 0.82rem;
+	color: #333;
+	position: fixed;
+	z-index: 3;
+	background: #fff;
+}
+.fenleiFill{
+	height:0.82rem;
+}
+.fenlei>div{
+	width:50%;
+	height: 100%;
+	border-bottom:0.02rem solid #ddd ;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	
+}
+.fenlei .active{
+	border-color: #4ba60f;
+	color: #4ba60f;
+}
+.fenlei>div p{
+	display: inline-block;
+	text-align: center;
+	width:100%;
+	height:0.5rem;
+	line-height: 0.5rem;
+}
+.fenlei .left p{
+	border-right: 0.02rem solid #ddd;
+	
+}
+.fenlei p span{
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.swiper-container{
+	width: 100%;
+	/*height:3rem;*/
+}
+.swiper-wrapper{
+	width:100%;
+	/*height:3rem;*/
+}
+
+/*未完成商品列表*/
+.pending{
+	width:100%;
+}
+.pending ul{
+	width:100%;
+	background: #f1f1f1;
+	padding-bottom:0.6rem ;
+}
+.pending ul li{
+	width:100%;
+	background: #fff;
+	margin-bottom: 0.1rem;
+	overflow: hidden;
+	font-size: 0.26rem;
+}
+.pending .orderNumber{
+	height:0.8rem;
+	line-height: 0.8rem;
+	text-indent: 0.3rem;
+	border-bottom:0.01rem solid #f1f1f1 ;
+}
+.pending .liWrap{
+	padding: 0.3rem 0 0;
+	border-bottom:0.01rem solid #f1f1f1 ;
+	box-sizing: border-box;
+	width:100%;
+	overflow: hidden;
+}
+.pending .liWrap .info{
+	padding: 0 0 0 0.3rem;
+	box-sizing: border-box;
+	margin-bottom: 0.3rem;
+	overflow: hidden;
+}
+.pending .liWrap .pic{
+	width:1.5rem;
+	height:1.5rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+}
+.pending .liWrap .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.pending .explain{
+	width:5.3rem;
+	padding: 0 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+	
+}
+.pending .explain p{
+	line-height: 0.4rem;
+}
+.pending .explain p:nth-of-type(2){
+	margin: 0.3rem 0 0.05rem;
+	color: #999;
+	font-size: 0.22rem;
+}
+.pending .explain p:last-child{
+	color: #4ba60f;
+	font-size: 0.28rem;
+}
+.pending .liWrap .price{
+	width:100%;
+	height:0.8rem;
+	line-height: 0.8rem;
+	padding: 0 0.3rem;
+	text-align: right;
+	box-sizing:border-box;
+	border-top: 0.01rem solid #f1f1f1;
+	border-bottom: 0.01rem solid #f1f1f1;
+}
+.pending .liWrap .price>span{
+	margin-right: 0.2rem;
+}
+.pending .liWrap .price .prePay{
+	width:1.2rem;
+	height:0.6rem;
+	display: inline-block;
+	line-height: 0.6rem;
+	border-radius: 0.05rem;
+	background: #4ba60f;
+	font-weight: normal;
+	text-align: center;
+	margin-left:0.5rem ;
+}
+.pending .liWrap .price .prePay a{
+	
+	color: #fff;
+}
+/*已完成商品列表*/
+.finish{
+	width:100%;
+}
+.finish ul{
+	width:100%;
+	background: #f1f1f1;
+	padding-bottom:0.6rem ;
+}
+.finish ul li{
+	width:100%;
+	background: #fff;
+	margin-bottom: 0.1rem;
+	overflow: hidden;
+	font-size: 0.26rem;
+}
+.finish .orderNumber{
+	height:0.8rem;
+	line-height: 0.8rem;
+	text-indent: 0.3rem;
+	border-bottom:0.01rem solid #f1f1f1 ;
+}
+.finish .liWrap{
+	padding: 0.3rem 0.3rem 0 0;
+	border-bottom:0.01rem solid #f1f1f1 ;
+	box-sizing: border-box;
+	width:7.2rem;
+	margin-left: 0.3rem;
+	overflow: hidden;
+}
+.finish .liWrap .info{
+	overflow: hidden;
+	margin-bottom: 0.3rem;
+}
+.finish .liWrap .pic{
+	width:1.5rem;
+	height:1.5rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+}
+.finish .liWrap .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.finish .explain{
+	width:5.3rem;
+	padding: 0 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+	
+}
+.finish .explain p{
+	line-height: 0.4rem;
+}
+.finish .explain p:nth-of-type(2){
+	margin: 0.3rem 0 0.05rem;
+	color: #999;
+	font-size: 0.22rem;
+}
+.finish .explain p:last-child{
+	color: #4ba60f;
+	font-size: 0.28rem;
+}
+.finish .explain b{
+	font-weight: normal;
+	color: #666;
+	font-style: none;
+	font-size: 0.25rem;
+}
+.finish .liWrap .price{
+	width:100%;
+	height:0.8rem;
+	line-height: 0.8rem;
+	text-align: right;
+	border-top: 0.01rem solid #f1f1f1;
+	border-bottom: 0.01rem solid #f1f1f1;
+}
+.finish .liWrap .bot{
+	height:1.2rem;
+	color: #666;
+	padding-top: 0.22rem;
+	box-sizing: border-box;
+}
+.finish .liWrap .bot span{
+	width:1.78rem;
+	height:0.74rem;
+	line-height: 0.74rem;
+	border: 0.01rem solid #666666;
+	border-radius: 0.05rem;
+	text-align: center;
+}
+.finish .liWrap .bot .service{
+	margin-left: 0.3rem;
+}
+.finish .liWrap .bot .service a{
+	color: #666;
+}
+.finish .liWrap .bot .active{
+	border-color: #4ba60f;
+	background: #4ba60f;
+	
+}
+.finish .liWrap .bot .active a{
+	color: #fff;
+}
+.finish .liWrap .bot .done{
+	border-color: #4ba60f;
+	background: #999;
+	color: #fff;
+}
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:0.95rem;
+}
+
+/*底部固定栏*/
+#footer{
+	width:100%;
+	height:0.95rem;
+	position: fixed;
+	bottom: 0;
+	border-top: 0.02rem solid #e5e5e5;
+	background: #fff;
+}
+#footer ul{
+	width:100%;
+	height:100%;
+	padding: 0.15rem 1.3rem 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+}
+#footer ul li{
+	width:0.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+#footer ul li p{
+	width:100%;
+	height:0.45rem;
+	margin-bottom: 0.05rem;
+	background-size: 7.2rem 8rem !important;
+}
+#footer ul li:nth-child(1) p{
+	background: url(../img/s.png) no-repeat -1.5rem -5.4rem;
+}
+#footer ul li:nth-child(2) p{
+	background: url(../img/s.png) no-repeat -5.1rem -5.4rem;
+}
+#footer ul li:nth-child(3) p{
+	background: url(../img/s.png) no-repeat -2.93rem -5.4rem;
+}
+
+
+.b1{
+	width: 0.4rem;
+	height: 0.4rem;
+	float: left;
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+.b2{
+	background: url(../img/orangeStar.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+

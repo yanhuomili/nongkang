@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>我的优惠券</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myDiscountSheet.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">我的优惠券<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="wrap">
+			<ul>
+				<li class="discountSheet availavle">
+					<div class="pic"><img src="img/cicle.png"/></div>
+					<div class="left">
+						<span class="sureUse">50元</span>
+					</div>
+					<div class="right">
+						<p>满25元可使用</p>
+						<p>有效期:2015-4-1至2017-6-2</p>
+					</div>
+				</li>
+				<li class="discountSheet used unavailavle">
+					<div class="pic"><img src="img/cicle2.png"/></div>
+					<div class="left">
+						<span class="sureUse">50元</span>
+					</div>
+					<div class="right">
+						<p>满25元可使用</p>
+						<p>有效期:2015-4-1至2017-6-2</p>
+						<img src="img/shiyong@2x.png"/>
+					</div>
+				</li>
+				<li class="discountSheet used overdue">
+					<div class="pic"><img src="img/cicle2.png"/></div>
+					<div class="left">
+						<span class="sureUse">50元</span>
+					</div>
+					<div class="right">
+						<p>满25元可使用</p>
+						<p>有效期:2015-4-1至2017-6-2</p>
+						<img src="img/guoqi@2x.png"/>
+					</div>
+				</li>
+			</ul>
+		</section>
+			
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.discountSheet').on('singleTap',function(){
+					if($(this).hasClass('availavle')){
+						alert('可用');
+					}else if($(this).hasClass('unavailavle')){
+						alert('已可用');
+					}else if($(this).hasClass('overdue')){
+						alert('已过期')
+					}
+				})
+				
+			})
+		</script>
+	</body>
+</html>

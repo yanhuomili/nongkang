@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">注册<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="head"></section>
+		<section class="info">
+			<div class="phone"><span>手机号</span><input type="text"/><span class=""></span></div>
+			<div class="phone"><span>验证码</span><input type="text"/><span class="checkCode right">验证码</span></div>
+			<div class="phone"><span>设置密码</span><input type="password"/><span class=""></span></div>
+			<div class="phone"><span>专属会员号</span><input type="text"/><span class=""></span></div>
+		</section>
+		<section class="login">
+			<button class="loginBtn"><a href="shouye.html">登录</a></button>
+			<p>点击注册表示默认同意&nbsp;&nbsp;<span><img src="img/register1.png"/></span><a href="userAgreement.html">用户使用协议</a><span><img src="img/register2.png"/></span></p>
+		</section>
+		<!--底部-->
+		<footer></footer>
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var num=60;
+				var timer=null;
+				$('.checkCode').on('singleTap',function(){
+					$('.checkCode').css({'background':'#ccc'});
+					clearInterval(timer);
+					timer=setInterval(function(){
+						num--;
+						$('.checkCode').html('<i>'+num+'</i>s后再获取');
+						if(num==0){
+							$('.checkCode').css({'background':'#4ba60f'}).html('验证码');
+							num=60;
+							clearInterval(timer);
+						}
+					},1000)
+					
+				})
+			})
+		</script>
+	</body>
+</html>
+

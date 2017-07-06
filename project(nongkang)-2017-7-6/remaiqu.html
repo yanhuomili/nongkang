@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>热卖区</title>
+		<link rel="stylesheet" type="text/css" href="css/remaiqu.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<p><i class="goBack"></i><span class="">首页</span></p><span>热卖区</span><b></b>
+		</header>
+		<section class="headerFill"></section>
+		<section class="content">
+			<dl>
+				<dt><img src="img/rmpic.jpg"/></dt>
+				<dd>
+					<p>快速双usb充电器iPhone7苹果6 6s手机5s安卓通用2A只能插头</p>
+					<div>
+						<div class="left">
+							<p>&yen;<i>39.9</i><em>100</em></p>
+							<span>已售<b>20</b>件</span>
+						</div>
+						<a href="###" class="right">立即下单</a>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="img/rmphone.jpg"/></dt>
+				<dd>
+					<p>快速双usb充电器iPhone7苹果6 6s手机5s安卓通用2A只能插头</p>
+					<div>
+						<div class="left">
+							<p>&yen;<i>39.9</i><em>100</em></p>
+							<span>已售<b>20</b>件</span>
+						</div>
+						<a href="###" class="right">立即下单</a>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="img/rmphone.jpg"/></dt>
+				<dd>
+					<p>快速双usb充电器iPhone7苹果6 6s手机5s安卓通用2A只能插头</p>
+					<div>
+						<div class="left">
+							<p>&yen;<i>39.9</i><em>100</em></p>
+							<span>已售<b>20</b>件</span>
+						</div>
+						<a href="###" class="right">立即下单</a>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="img/rmpic.jpg"/></dt>
+				<dd>
+					<p>快速双usb充电器iPhone7苹果6 6s手机5s安卓通用2A只能插头</p>
+					<div>
+						<div class="left">
+							<p>&yen;<i>39.9</i><em>100</em></p>
+							<span>已售<b>20</b>件</span>
+						</div>
+						<a href="###" class="right">立即下单</a>
+					</div>
+				</dd>
+			</dl>
+		</section>
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript">
+			//适配
+			var i = window.devicePixelRatio>1?1/window.devicePixelRatio:1;//查看像素比，用于页面缩放；
+			var meta =document.createElement("meta");
+			meta.name="viewport";
+			meta.content='width=device-width,user-scalable=no,initial-scale='+i+',minimum-scale='+i+',maximum-scale='+i;
+			document.getElementsByTagName("head")[0].appendChild(meta);//动态添加meta-viewport标签，设置好适配；
+			
+			var html = document.getElementsByTagName("html")[0];
+			var iW =document.body.offsetWidth;
+			var scale=iW/750*100;
+			html.style.fontSize=scale+"px";//动态设置html根节点的font-size，用于rem布局；
+			
+			window.onresize=function(){
+				var html = document.getElementsByTagName("html")[0];
+				var iW =document.body.offsetWidth;
+				var scale=iW/750*100;
+				html.style.fontSize=scale+"px";//动态设置html根节点的font-size，用于rem布局；
+			}
+			//以上是适配
+			
+			
+			
+		</script>
+	</body>
+</html>

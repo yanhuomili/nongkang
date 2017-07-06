@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/privateInfo.css"/>
+	</head>
+	<body>
+		<section class="selectArea">
+			<ul class="province">
+				<h2>请选择省</h2>
+				<div class="liFill"></div>
+				<li><span>广东</span><i></i></li>
+				<li><span>广西</span><i></i></li>
+				<li><span>湖南</span><i></i></li>
+			</ul>
+			<ul class="city">
+				<h2>请选择市</h2>
+				<div class="liFill"></div>
+				<li><span>广州</span><i></i></li>
+				<li><span>中山</span><i></i></li>
+				
+				
+			</ul>
+			<ul class="qu">
+				<h2>请选择区</h2>
+				<div class="liFill"></div>
+				<li><span>白云</span><i></i></li>
+				<li><span>天河</span><i></i></li>
+				<li><span>花都</span><i></i></li>
+			</ul>
+		</section>
+		<!--头部-->
+		<header>
+			<section class="top">个人信息<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="infoDetail">
+			<ul>
+				<li><span>头像</span><i class="headPic"><input type="file"  class="file"/></i></li>
+				<li><span>昵称</span><input type="text" name="" id="" value="木头人" class="userName"/></li>
+				<li class="sex"><span>性别</span><i>请选择</i></li>
+				<li><span>生日</span><i class="birthday">1987-02-15</i></li>
+			</ul>
+		</section>
+		<section class="region" style="position: relative;">
+			<span>地区</span>
+			<i class="choice" v-on:click="region">请选择</i>
+		</section>
+		
+		<!--弹窗-->
+		<ul class="sexList">
+			<li>男</li>
+			<li>女</li>
+		</ul>
+		<section class="date">
+			<div>
+		   		<p>请选择生日</p>
+		   		<label>
+		   			
+		        <i><select id="sel_year"></select>年</i>
+		        <i><select id="sel_month"></select>月</i>
+		        <i><select id="sel_day"></select>日</i>
+		        </label>
+	      	</div>
+	      	<span class="sureDate">确定</span>
+		</section>
+		
+		
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/birthday.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				//上传头像
+				$('.headPic input').on('change',function(){
+					var f=this.files;//获取文件对象
+					var len=f.length;//文件对象的个数
+					console.log(f);
+					for(var i=0;i<len;i++){
+						(function(index){
+							var read=new FileReader();//实例文件读取对象
+							read.readAsDataURL(f[i]);//调用读取文件的方法
+							console.log(read)
+							read.onload=function(){
+//								console.log(this.result);//添加进来的文件的路径
+								var Img=$('<img class="picture"/>');
+								Img[0].src=this.result;
+								$('.headPic').append(Img)
+							}
+						})(i)
+					}
+					return false;//阻止默认事件
+				})
+				
+				
+				//修改昵称
+				$('.userName').on('change',function(){
+					var newval=$('.userName').val()
+					$('.userName').val(newval)
+				})
+				//选择性别
+				$('.sex').on('singleTap',function(){
+					$('.sexList').show();
+				})
+				$('.sexList li').on('singleTap',function(){
+					var val=$(this).text();
+					$('.sex i').html(val);
+					$(this).parent().hide();
+				})
+				//选择日历插件
+				$.ms_DatePicker({
+		            YearSelector: ".sel_year",
+		            MonthSelector: ".sel_month",
+		            DaySelector: ".sel_day"
+			    });
+				$.ms_DatePicker();
+				//选择生日
+				$('.sureDate').on('singleTap',function(){
+					var year=$('#sel_year').val();
+					var month=$('#sel_month').val();
+					var day=$('#sel_day').val();
+					var birthday=year+'-'+month+'-'+day;
+					$('.birthday').text(birthday)
+					$('.date').hide();
+				})
+				$('.birthday').parent().on('singleTap',function(){
+					$('.date').show();
+				})
+				
+				//选择地区
+				$('.choice').parent().on('singleTap',function(){
+					$('.selectArea').show();
+				})
+				var arr=[];
+				for(var i=0;i<3;i++){
+					(function(index){
+						var li=$('.selectArea').children().eq(index).find('li');
+						var len=li.length;
+						for(var i=0;i<len;i++){
+							li.eq(i).on('singleTap',function(){
+								var val=$(this).find('span').text();
+								arr.push(val);
+								$(this).parent().hide().next().show();
+								if($(this).parent().hasClass('qu')){
+									$(this).parent().hide().parent().hide().children().first().show()
+									alert(arr)
+									arr=[];
+								}
+							})
+						}
+					})(i)
+				}
+			
+				
+			})
+		</script>
+	</body>
+</html>
+

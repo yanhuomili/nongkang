@@ -1,0 +1,35 @@
+body{
+	background: #f1f1f1;
+}
+.news{
+	width:100%;
+	margin-bottom:0.3rem ;
+}
+.news ul{
+	width:100%;
+	padding: 0.37rem 0.3rem 0;
+	box-sizing: border-box;
+}
+.news ul li{
+	width:100%;
+	background: #fff;
+	padding: 0.3rem 0.2rem 0.3rem 0.45rem;
+	box-sizing: border-box;
+}
+.news ul li h3{
+	font-size: 0.3rem;
+	font-weight: normal;
+	margin-bottom:0.3rem;
+}
+.news ul li p{
+	font-size: 0.26rem;
+	line-height: 1.5;
+}
+.data{
+	width:100%;
+	height:1rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.2rem;
+	color: #999999;
+}

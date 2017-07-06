@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>合作商</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hezuoshang.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">合作商<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="address">
+			
+		</section>
+		<section class="coo">
+			<ul>
+				<li>
+					<div class="left pic"><a href="hezuoshang-detail.html"><img src="img/coo1.jpg"/></a></div>
+					<div class="left address">
+						<h4>麦糖烘焙（广州店）</h4>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>	
+						<p>地址: 广州市白云区运城西路58号</p>
+						<p>电话: 021-12545632</p>
+					</div>
+				</li>
+				<li>
+					<div class="left pic"><a href="hezuoshang-detail.html"><img src="img/coo1.jpg"/></a></div>
+					<div class="left address">
+						<h4>麦糖烘焙（广州店）</h4>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>	
+						<p>地址: 广州市白云区运城西路58号</p>
+						<p>电话: 021-12545632</p>
+					</div>
+				</li>
+				<li>
+					<div class="left pic"><a href="hezuoshang-detail.html"><img src="img/coo1.jpg"/></a></div>
+					<div class="left address">
+						<h4>麦糖烘焙（广州店）</h4>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>	
+						<p>地址: 广州市白云区运城西路58号</p>
+						<p>电话: 021-12545632</p>
+					</div>
+				</li>
+				<li>
+					<div class="left pic"><a href="hezuoshang-detail.html"><img src="img/coo1.jpg"/></a></div>
+					<div class="left address">
+						<h4>麦糖烘焙（广州店）</h4>
+						<ol class="box">
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+							<li class="b1"></li>
+						</ol>	
+						<p>地址: 广州市白云区运城西路58号</p>
+						<p>电话: 021-12545632</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//合作商评论等级
+				var arr=[1,4,2,3]
+				companyRank(arr);
+				function companyRank(arr){
+					var len=$('.coo>ul>li').length;
+					for(var i=1;i<=len;i++){
+						rank($('.coo li:nth-of-type('+i+') .box'),arr[i-1]);
+					}
+					function rank(obj,n){//后台传过来的数据就是星星等级
+						var b1=obj.children();
+						b1.addClass('b2');
+						for(var i=n;i<b1.length;i++){
+							b1.eq(i).removeClass('b2')
+						}
+					}
+				}
+				
+				//跳到商品详情
+				$('.coo>ul>li').on('singleTap',function(){
+					window.location="goods-detail.html";
+				})
+				
+			})
+		</script>
+	</body>
+</html>

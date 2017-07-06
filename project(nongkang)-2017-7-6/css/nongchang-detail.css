@@ -1,0 +1,427 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+
+/*分享朦胧层*/
+.grayLayout{
+	width:100%;
+	height:100vh;
+	background: rgba(0,0,0,0.4);
+	position:fixed;
+	z-index: 900;
+	display: none;
+}
+.show{
+	display: block;
+}
+.share{
+	width:100%;
+	height:3.1rem;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+}
+.share .top{
+	height:2.2rem;
+	box-sizing: border-box;
+	border-top: 0.01rem solid #d4d4d4;
+	border-bottom: 0.01rem solid #d4d4d4;
+	padding: 0 0.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.share .top li{
+	width:1.08rem;
+	height:1.4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.23rem;
+}
+.share .top i{
+	width:0.9rem;
+	height:0.9rem;
+	border: 0.01rem solid #d4d4d4;
+	border-radius: 50%;
+	margin-bottom: 0.18rem;
+	background-size: 0.9rem 0.9rem !important;
+}
+.share .top .weixin{
+	background: url(../img/weixin.png) no-repeat center center;
+}
+.share .top .friendCicle{
+	background: url(../img/friendCicle.png) no-repeat center center;
+}
+.share .top .QQFriend{
+	background: url(../img/QQFriend.png) no-repeat center center;
+}
+.share .top .QQSpace{
+	background: url(../img/QQSpace.png) no-repeat center center;
+}
+.share .top .blog{
+	background: url(../img/blog.png) no-repeat center center;
+}
+.share .bot{
+	text-align: center;
+	line-height: 0.9rem;
+}
+
+/*轮播图*/
+.banner{
+	width:100%;
+	height:5.4rm;
+}
+.banner img{
+	/*display: block;*/
+	width:100%;
+	height:100%;
+}
+.banner .swiper-container{
+	width: 100%;
+	
+}
+.banner .swiper-wrapper{
+	width:100%;
+	height:5.36rem;
+}
+.banner .swiper-pagination{
+	left: 3rem !important;
+	bottom: 0.2rem !important;
+}
+.banner .swiper-pagination span{
+	width:0.16rem;
+	height:0.16rem;
+	background: #4ba60f;
+}
+
+
+/*地址*/
+.address{
+	width: 100%;
+	height:2.43rem;
+	border-top: 0.02rem solid #f1f1f1;
+	margin-top: 0.05rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+}
+.address h4{
+	height:0.6rem;
+	line-height: 0.6rem;
+	margin-top: 0.25rem;
+	font-weight: normal;
+	font-size: 0.34rem;
+	color: #333;
+}
+.address h4 i{
+	width:0.6rem;
+	height:100%;
+	margin-left: 0.7rem;
+	background: url(../img/up.png) no-repeat center center;
+	background-size: 0.4rem 0.5rem;
+}
+.address h4 em{
+	width:0.6rem;
+	height:100%;
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.5rem 0.5rem;
+}
+.address h4 .active{
+	background: url(../img/orangeStar.png) no-repeat center center;
+	background-size: 0.5rem 0.5rem;
+}
+.address p{
+	font-size: 0.3rem;
+	margin-top: 0.25rem;
+	color: #666;
+}
+/*更多商品*/
+.introduce{
+	width: 100%;
+	height:1.4rem;
+	line-height: 1rem;
+	padding: 0 0.32rem;
+	box-sizing: border-box;
+	border-top: 0.2rem solid #f1f1f1;
+	border-bottom: 0.2rem solid #f1f1f1;
+	font-size: 0.3rem;
+	color: #333;
+}
+.introduce span{
+	width:0.3rem;
+	height:100%;
+	background: url(../img/lt.png) no-repeat center center;
+	background-size: 0.14rem 0.26rem;
+}
+/*商品列表*/
+.shoppingList{
+	width:100%;
+}
+.shoppingList .top{
+	height:0.8rem;
+	/*line-height:0.8rem;*/
+	color: #666;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+.shoppingList .top i{
+	width:0.5rem;
+	height:100%;
+	margin-right: 0.1rem ;
+	background: url(../img/list.png) no-repeat center center;
+	background-size: 0.38rem 0.38rem;
+}
+.shoppingList ul{
+	width:100%;
+}
+.shoppingList ul li{
+	height:2.12rem;
+	border-top: 0.01rem solid #f1f1f1;
+	border-bottom: 0.01rem solid #f1f1f1;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.shoppingList .liWrap{
+	width:100%;
+	overflow: hidden;
+}
+.shoppingList ul li .pic{
+	width:1.52rem;
+	height:1.52rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+}
+.shoppingList ul li .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.shoppingList .explain{
+	width:5.3rem;
+	padding: 0 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+}
+.shoppingList .explain p{
+	line-height: 0.4rem;
+}
+.shoppingList .explain p:nth-child(1) span{
+	padding: 0 0.1rem;
+	display: inline-block;
+	border-radius: 0.05rem;
+	background: #ff323c;
+	color: #fff;
+}
+.shoppingList .explain p:last-child{
+	margin-top: 0.3rem;
+	color: #4ba60f;
+	font-size: 0.28rem;
+}
+.shoppingList .explain i{
+	margin:0 0.2rem 0 0.1rem; 
+}
+.shoppingList .explain b{
+	font-weight: normal;
+	margin-left: 0.2rem;
+	padding: 0 0.2rem;
+	position: relative;
+	color: #666;
+	font-style: none;
+	font-size: 0.2rem;
+}
+.shoppingList .explain em{
+	width:0.6rem;
+	height: 0.6rem;
+	background: url(../img/buyCar.png) no-repeat center center;
+	background-size: 0.6rem 0.61rem;
+	margin-top:-0.09rem ;
+}
+
+/*规格列表*/
+.spec{
+	width:100%;
+	height:5.78rem;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	display: none;
+}
+.spec .pad{
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+}
+
+.spec .top{
+	height:1.51rem;
+}
+.spec .top .pic{
+	width: 1.48rem;
+	height:1.48rem;
+	border: 0.01rem solid #dbdbdb;
+	border-radius: 0.05rem;
+	margin-top: -0.3rem;
+}
+.spec .top .pic img{
+	border-radius: 0.05rem;
+}
+.spec .top .mid{
+	width:4.5rem;
+	padding: 0.25rem 0 0 0.25rem;
+	box-sizing: border-box;
+	color: #666;
+}
+.spec .top .mid p:first-child{
+	color: #4ba60f;
+	margin-bottom: 0.2rem;
+}
+.spec .top .mid span{
+	color: #999999;
+	font-size: 0.2rem;
+	margin-left: 0.4rem;
+}
+.spec .top .close{
+	width:0.42rem;
+	height:0.6rem;
+	background: url(../img/close.png) no-repeat center center;
+	background-size: 0.42rem 0.6rem;
+}
+.spec>.mid{
+	height:2.2rem;
+	box-sizing: border-box;
+	border-top: 0.01rem solid #e3e3e3;
+	border-bottom: 0.01rem solid #e3e3e3;
+}
+.spec>.mid .food{
+	width:1.5rem;
+	height:100%;
+	padding-top: 0.4rem;
+	box-sizing: border-box;
+}
+.spec>.mid .weight{
+	width:4.3rem;
+	height:100%;
+	padding-top: 0.3rem;
+	box-sizing: border-box;
+}
+.spec>.mid .weight li{
+	width: 1.71rem;
+	height:0.6rem;
+	border: 0.02rem solid #999;
+	border-radius: 0.05rem;
+	text-align: center;
+	line-height: 0.6rem;
+	margin: 0 0.2rem 0.3rem;
+	float: left;
+	color: #999;
+}
+.spec .bot{
+	height:1.08rem;
+	line-height: 1.08rem;
+	font-size: 0.3rem;
+}
+.spec .bot p{
+	height:0.32rem;
+}
+	
+.spec .bot span{
+	display: inline-block;
+	width:0.5rem;
+	text-align: center;
+}
+.spec .bot i{
+	display: inline-block;
+	width:0.5rem;
+	height:100%;
+}
+.spec .bot i:nth-of-type(1){
+	background: url(../img/jian.png) no-repeat center center;
+	background-size: 0.3rem 0.09rem;
+}
+.spec .bot i:nth-of-type(2){
+	background: url(../img/jia.png) no-repeat center center;
+	background-size: 0.32rem 0.32rem;
+}
+.spec .operation{
+	width: 100%;
+	height:1rem;
+	color: #fff;
+	text-align: center;
+}
+.spec .operation .joinCar{
+	width:50%;
+	line-height: 1rem;
+	background: #60af2f;
+}
+.spec .operation .buyNow{
+	width:50%;
+	line-height: 1rem;
+	background: #417d1a;
+}
+
+
+
+
+
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:0.95rem;
+}
+
+/*底部固定栏*/
+#footer{
+	width:100%;
+	height:0.95rem;
+	position: fixed;
+	bottom: 0;
+	border-top: 0.02rem solid #e5e5e5;
+	background: #fff;
+}
+#footer ul{
+	width:100%;
+	height:100%;
+	padding: 0.15rem 1.3rem 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+}
+#footer ul li{
+	width:0.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+#footer ul li p{
+	width:100%;
+	height:0.45rem;
+	margin-bottom: 0.05rem;
+	background-size: 7.2rem 8rem !important;
+}
+#footer ul li:nth-child(1) p{
+	background: url(../img/s.png) no-repeat -1.5rem -5.4rem;
+}
+#footer ul li:nth-child(2) p{
+	background: url(../img/s.png) no-repeat -5.1rem -5.4rem;
+}
+#footer ul li:nth-child(3) p{
+	background: url(../img/s.png) no-repeat -2.93rem -5.4rem;
+}
+
+
+.b1{
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+.b2{
+	background: url(../img/orangeStar.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+

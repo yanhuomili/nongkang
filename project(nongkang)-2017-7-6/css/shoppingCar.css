@@ -1,0 +1,178 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+body{
+	background: #f1f1f1;
+}
+/*分类*/
+.edit{
+	width:100%;
+	height: 0.9rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	background: #4ba60f;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 999;
+}
+.editBtn{
+	display: inline-block;
+	width:0.98rem;
+	height:0.5rem;
+	line-height:0.5rem;
+	text-align: center;
+	border: 0.02rem solid #fff;
+	border-radius: 0.05rem;
+}
+
+/*商品列表*/
+.shoppingList{
+	width:100%;
+}
+.shoppingList ul{
+	width:100%;
+}
+.shoppingList ul li{
+	height:2.14rem;
+	border-top: 0.02rem solid #f1f1f1;
+	border-bottom: 0.02rem solid #f1f1f1;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: #fff;
+}
+.shoppingList .liWrap{
+	width:120%;
+	overflow: hidden;
+}
+.shoppingList .liWrap .isSlected{
+	width:0.42rem;
+	height:0.42rem;
+	box-sizing: border-box;
+	border: 0.02rem solid #9b9b9b;
+	border-radius: 50%;
+	margin: 0.54rem 0.3rem 0 0;
+}
+.shoppingList .liWrap .active1{
+	display: block;
+}
+.shoppingList .liWrap .active2{
+	background: url(../img/chose.png) no-repeat center center;
+	background-size: 0.42rem 0.42rem;
+}
+.shoppingList ul li .pic{
+	width:1.52rem;
+	height:1.52rem;
+	border: 0.01rem solid #e0e0e0;
+	border-radius: 0.05rem;
+}
+.shoppingList ul li .pic img{
+	width:100%;
+	height:100%;
+	border-radius: 0.05rem;
+}
+.shoppingList .explain{
+	width:4.6rem;
+	padding: 0 0 0 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+}
+.shoppingList .explain>p:nth-of-type(1){
+	height:0.8rem;
+}
+.shoppingList .explain .attribute{
+	margin: 0.05rem 0;
+	color: #999;
+	font-size: 0.22rem;
+}
+.shoppingList .explain .bot p{
+	height:0.37rem;
+}
+.shoppingList .explain .bot .money{
+	font-size: 0.28rem;
+	color: #4ba60f;
+}
+.shoppingList .explain .bot .total{
+	display: inline-block;
+	width:0.5rem;
+	height:0.37rem;
+	position: relative;
+	top: -0.1rem;
+	text-align: center;
+}
+.shoppingList .explain .bot i{
+	display: inline-block;
+	width:0.5rem;
+	height:0.37rem;
+}
+.shoppingList .explain .bot i:nth-of-type(1){
+	background: url(../img/jian.png) no-repeat center center;
+	background-size: 0.3rem 0.09rem;
+}
+.shoppingList .explain .bot i:nth-of-type(2){
+	background: url(../img/jia.png) no-repeat center center;
+	background-size: 0.32rem 0.32rem;
+}
+
+/*底部填充*/
+.botFill{
+	width:100%;
+	height:0.99rem;
+}
+
+/*底部固定栏*/
+#footer{
+	width:100%;
+	height:0.98rem;
+	position: fixed;
+	bottom: 0;
+	border-top: 0.01rem solid #e3e3e3;
+	background: #fff;
+	overflow:hidden;
+	z-index: 999;
+}
+#footer .left{
+	width:5.1rem;
+	padding: 0.26rem 0.3rem 0;
+	box-sizing: border-box;
+}
+#footer .left .check{
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	margin-left: 0.5rem;
+}
+#footer .left .checkall{
+	position: absolute;
+	top: -0.02rem;
+	left: -0.5rem;
+	width:0.38rem;
+	height:0.38rem;
+	border: 0.02rem solid #999;
+	border-radius: 50%;
+	
+}
+#footer .left .active{
+	background: url(../img/chose.png) no-repeat center center;
+	background-size: 0.42rem 0.42rem;
+}
+#footer .left .sum{
+	margin-left: 0.2rem;
+}
+#footer .left i,#footer .left b{
+	color: #4ba60f;
+}
+#footer .right{
+	width:2.4rem;
+	line-height: 0.98rem;
+	text-align: center;
+	background: #4ba60f;
+	color: #fff;
+}
+

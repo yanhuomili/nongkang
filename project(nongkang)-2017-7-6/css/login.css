@@ -1,0 +1,118 @@
+/*填充区*/
+.head{
+	height:0.96rem;
+	background: #f1f1f1;
+}
+
+
+/*手机号密码区域*/
+.info{
+	height:1.97rem;
+	border-bottom: 0.02rem solid #dcdcdc;
+	border-top: 0.02rem solid #dcdcdc;
+	box-sizing: border-box;
+	padding: 0 0.3rem;
+	letter-spacing: 0.02rem;
+	text-indent: 0.38rem;
+	line-height: 0.98rem;
+}
+.info div{
+	box-sizing: border-box;
+	padding: 0 0.45rem;
+	height: 0.99rem;
+	position: relative;
+	text-indent: 0.7rem;
+}
+.info .phone{
+	border-bottom: 0.01rem solid #dcdcdc;
+}
+.info input{
+	width:85%;
+	outline: 0 none;
+	border: 0;
+	height:0.32rem;
+	line-height:0.32rem;
+	font-size: 0.28rem;	
+}
+.info span{
+	position: absolute;
+	top: 0.3rem;
+	width:0.42rem;
+	height:0.42rem;
+	background-size: 1rem 2rem !important;
+}
+.info .phone span:nth-child(1){
+	left: 0;
+	background: url(../img/info.png) -0.3rem -0.55rem;
+}
+.info .phone .del{
+	right: 0;
+	background: url(../img/info.png) -0.3rem -1rem;
+	
+}
+.info .password span:nth-child(1){
+	left: 0;
+	background: url(../img/info.png) -0.3rem -0.05rem;
+	
+}
+.info .password .passShow{
+	right: 0;
+	background: url(../img/info.png) -0.3rem -1.45rem;
+	
+}
+
+/*登录区域*/
+.login{
+	height:9.11rem;
+	box-sizing: border-box;
+	padding: 0.24rem 0.3rem 0;
+	background: #f1f1f1;
+	color: #999;
+}
+.passInfo .mark{
+	position:relative;
+	left: 0.25rem;
+	text-indent: 0.1rem;
+}
+.passInfo .gou{
+	background: url(../img/gou.png) no-repeat center center;
+	background-size: 0.21rem 0.16rem;
+}
+.passInfo .mark i{
+	position: absolute;
+	left: -0.25rem;
+	top: 0.06rem;
+	border: 0.01rem solid #000;
+	border-radius: 0.05rem;
+	/*background: #ccc;*/
+	width:0.25rem;
+	height:0.25rem;
+	content: "";
+}
+.passInfo .right{
+	color: #6699cc;
+}
+.loginBtn{
+	width:100%;
+	outline: 0 none;
+	border: 0;
+	height:0.9rem;
+	background: #4ba60f;
+	border-radius: 0.05rem;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.3rem;
+	margin: 0.8rem 0 1.24rem;
+}
+.loginBtn a{
+	color: #fff;
+	display: block;
+}
+.login p{
+	text-align: center;
+}
+.login p a{
+	display: inline-block;
+	border-bottom: 0.01rem solid #f8b551;
+	color:#f8b551;
+}

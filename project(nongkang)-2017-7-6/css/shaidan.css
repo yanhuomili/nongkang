@@ -1,0 +1,65 @@
+header .top{
+	font-size: 0.34rem;
+}
+header .goBack{
+	font-size: 0.29rem;
+}
+/*评价*/
+.comment{
+	width: 100%;
+	
+	font-weight: normal;
+}
+.comment .orderSheet{
+	overflow: hidden;
+	height:3.93rem;
+	padding: 0 0.22rem;
+	box-sizing: border-box;
+	margin-bottom: 0.02rem;
+	border-bottom: 0.08rem solid #f1f1f1;
+}	
+.comment .orderSheet h4{
+	color: #666;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	padding-left:0.1rem;
+	
+}
+.comment .orderSheet ul{
+	overflow: hidden;
+	padding-left:0.1rem ;
+	box-sizing: border-box;
+}
+.comment .orderSheet ul li:first-child{
+	margin-right: 0.1rem;
+}
+.comment .orderSheet ul li:last-child{
+	font-size: 0.16rem;
+	color: #999;
+}
+.comment .orderSheet .text{
+	font-size: 0.3rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.2rem;
+	text-indent: 0.3rem;
+}
+/*评论星星*/
+.box{
+	overflow: hidden;
+}
+.b1{
+	width: 0.27rem;
+	height: 0.4rem;
+	float: left;
+	margin-right: 0.1rem;
+	background: url(../img/start.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+.b2{
+	background: url(../img/orangeStar.png) no-repeat center center;
+	background-size: 0.27rem 0.26rem;
+}
+
+
+
+

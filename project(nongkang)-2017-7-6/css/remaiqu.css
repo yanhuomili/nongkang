@@ -1,0 +1,154 @@
+/*重置样式*/
+body,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,p,ol,i,em,b{
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+body{
+	font-size: 0.28rem;
+	font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; 
+}
+a{
+	text-decoration: none;
+	color: black;
+	display: block;
+}
+i{
+	font-style: normal;
+}
+b{
+	font-weight: normal;
+}
+em{
+	font-style: normal;
+}
+img{
+	width:100%;
+	height:100%;
+	display: block;
+}
+li{
+	list-style: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+body{
+	background: #f1f1f1;
+}
+header{
+	width:100%;
+	height:0.9rem;
+	background: #1ca5ff;
+	color: #fff;
+	font-size: 0.3rem;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+}
+header p{
+	display: flex;
+	align-items: center;
+}
+header b{
+	display: inline-block;
+	width:0.95rem;
+}
+header i{
+	display: inline-block;
+	width:0.2rem;
+	height:0.36rem;
+	margin-right: 0.15rem;
+	background: url(../img/rmgt.png) no-repeat center center;
+	background-size: 0.2rem 0.36rem;
+}
+.headerFill{
+	width:100%;
+	height:0.9rem;
+}
+.content{
+	width:100%;
+	height:100%;
+	padding-top:0.06rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: #f1f1f1;
+}
+.content dl{
+	width:3.72rem;
+	background: #fff;
+	margin-bottom: 0.06rem;
+	
+}
+.content dl dt{
+	width:3.72rem;
+	height:3.72rem;
+}
+.content dl dd{
+	width:100%;
+	padding: 0.15rem 0.25rem 0.15rem 0.15rem;
+	box-sizing: border-box;
+}
+.content dl dd>p{
+	width:90%;
+	font-size: 0.2rem;
+	line-height: 1.5;
+	margin-bottom: 0.25rem;
+}
+.content dl dd>div{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content dl dd>div>p{
+	
+}
+.content dl dd .left{
+	width:2.3rem;
+	font-size: 0.2rem;
+}
+.content dl dd .left i{
+	font-size: 0.28rem;
+	color: #fb4141;
+	margin: 0 0.25rem 0.07rem;
+}
+.content dl dd .left em{
+	color:#fb4141 ;
+	position: relative;
+}
+.content dl dd .left em:after{
+	content: "";
+	display: inline-block;
+	width:130%;
+	height:0.02rem;
+	background: #7a7a7a;
+	position: absolute;
+	top: 50%;
+	left: -15%;
+}
+.content dl dd a{
+	width:1rem;
+	height:0.4rem;
+	line-height: 0.4rem;
+	text-align: center;
+	background: #ff3d3d;
+	color: #fff;
+	font-size: 0.2rem;
+	border-radius: 0.1rem;
+}
+.content dl dd span{
+	color: #666;
+	display: inline-block;
+	margin-top: 0.1rem;
+}

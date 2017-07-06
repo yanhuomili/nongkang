@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">登录<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="head"></section>
+		<section class="info">
+			<div class="phone"><span></span><input type="text"  placeholder="手机号/会员号" /><span class="del"></span></div>
+			<div class="password"><span></span><input type="password" placeholder="密码" /><span class="passShow"></span></div>
+		</section>
+		<section class="login">
+			<div class="passInfo">
+				<span class="left mark"><i></i>记住密码</span>
+				<span class="right forget">忘记密码？</span>
+			</div>
+			<button class="loginBtn"><a href="shouye.html">登录</a></button>
+			<p>您还没有注册？<a href="register.html">马上注册</a></p>
+		</section>
+		<!--底部-->
+		<footer></footer>
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.forget').on('singleTap',function(){
+					window.location='forgetPassword.html'
+				})
+				
+				$('.mark i').on('singleTap',function(){
+					$(this).toggleClass('gou');
+				})
+				$('.del').on('singleTap',function(){
+					if($(this).prev().val()){
+						console.log('s')
+						$(this).prev().val('');
+					}
+				})
+				$('.passShow').prev().on('input',function(){
+					if(!$(this).val()){
+						$(this).attr('type','password');
+					}
+				})
+				//密码的显示和隐藏
+				$('.passShow').on('singleTap',function(){
+					if($(this).prev().val()){
+						console.log('有值')
+						if($(this).prev().attr('type')=='password'){
+							$(this).prev().attr('type','text')
+						}else{
+							$(this).prev().attr('type','password')
+						}
+					}
+					
+//					console.log($(this).prev().attr('type'))
+				})
+				
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tuwenjieshao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">商品详情<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<!--分类-->
+		<section class="fenlei">
+			<div class="left active">
+				<p><span class="unCompleted">图文介绍</span></p>
+			</div>
+			<div class="right ">
+				<p><span class="completed">产品参数</span></p>
+			</div>
+		</section>
+		<section class="fenleiFill"></section>
+		<div id="wrapper">
+			<div id="scroll">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<!--图片介绍-->
+						<div class="swiper-slide">
+							<section class="pictures">
+								<ul>
+									<li><img src="img/tuwen.jpg"/></li>
+									<li><img src="img/tuwen.jpg"/></li>
+									<li><img src="img/tuwen.jpg"/></li>
+								</ul>
+							</section>
+						</div>
+						<!--产品参数-->
+						<div class="swiper-slide">
+							<section class="paremeter">
+								<h3>商品参数</h3>
+								<p>商品名称：<span>大概</span></p>
+								<p>品牌：<span>260ml</span></p>
+								<p>产品规格：<span>长日光</span></p>
+								<p>保养：<span>放置阴凉处</span></p>
+								<p>产品特点：<span>2017.6.1</span></p>
+								<p>保质期：<span>三年</span></p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>		
+				
+		<section class="botFill"></section>
+		<footer id="footer">
+			<div class="left">
+				<div class="left store">
+					<p></p>
+					<span>店铺</span>
+				</div>
+				<div class="left collect">
+					<p></p>
+					<span>收藏</span>
+				</div>
+			</div>
+			<div class="right">
+				<div class="add left">加入购物车</div>
+				<div class="purchase left">立即购买</div>
+			</div>
+		</footer>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<!--<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/swiper.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var minH=document.documentElement.clientHeight;//屏幕的高度
+				var w=document.body.clientWidth;//屏幕的宽度
+				minHeight();//设置每一屏的最小高度
+				function minHeight(){
+					$('.swiper-slide').css({'min-height':(minH-280)+'px'})
+				}
+				var myswiper=new Swiper('.swiper-container',{
+					paginationClickable: true,
+					autoplayDisableOnInteraction: false,
+					direction:'horizontal',
+					autoplay:false,
+					loop:false,
+					autoHeight:true,//每一屏的高度自适应
+					onSlideChangeEnd:function(swiper){//滑屏后执行的函数
+						var index=$('.swiper-slide'+'.swiper-slide-active').index();//选择器必须要用字符串拼接
+						$('.fenlei div').eq(index).addClass('active').siblings().removeClass('active');//对应的头部导航切换				
+//						alert('滑屏后')
+					}
+				})
+				//点击头部导航切换内容
+				$('.fenlei div').on('singleTap',function(){
+					var index=$(this).index();
+					console.log(index)
+//					$('.fenlei div').eq(index).addClass('active').siblings().removeClass('active');//对应的头部导航切换				
+					$(this).addClass('active').siblings().removeClass('active'); 
+					$('.swiper-wrapper').animate({transform:'translate3d(-'+index*w+'px,0,0)'},150,"ease-out")
+				})
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>

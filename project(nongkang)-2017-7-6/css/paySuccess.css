@@ -1,0 +1,84 @@
+.success{
+	width:100%;
+	height:5.47rem;
+	box-sizing: border-box;
+	background: #f1f1f1;
+}
+.success ul{
+	width:100%;
+	display: flex;
+	flex-direction:column ;
+	align-items: center;
+	padding: 1.25rem 0 0;
+}
+.success .icon{
+	width:1.4rem;
+	height:1.4rem;
+}
+.successText{
+	font-size: 0.38rem;
+	margin: 0.4rem 0 1.3rem;
+}
+
+.guessLike{
+	height:0.32rem;
+	font-size: 0.23rem;
+	display: flex;
+	align-items: center;
+}
+.guessLike p{
+	margin: 0 0.15rem;
+	display: flex;
+	align-items: center;
+}
+.guessLike .xin{
+	display: inline-block;
+	width:0.32rem;
+	height:0.32rem;
+	margin-right: 0.15rem;
+}
+.guessLike .line{
+	width:1.05rem;
+	height:0.32rem;
+	background: url(../img/line1.png) no-repeat center center;
+	background-size: 1.05rem 0.01rem;
+}
+
+/*水果列表*/
+.fruitsList{
+	widows: 100%;
+}
+.fruitsList ul{
+	widows: 100%;
+	background: #f1f1f1;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.fruitsList ul li{
+	width:3.7rem;
+	height:5.47rem;
+	margin-bottom: 0.13rem;
+	background: #fff;
+}
+.fruitsList ul li dl{
+	width:100%;
+	color: #333;
+}
+.fruitsList ul li dl dt{
+	width:100%;
+	height:3.6rem;
+}
+.fruitsList ul li dl dd{
+	padding: 0 0.12rem 0 0.15rem;
+	box-sizing: border-box;
+	margin-top: 0.3rem;
+}
+.fruitsList ul li dl dd:last-child{
+	color: #4ba60f;
+	margin: ;
+}
+.fruitsList ul li dl dd:last-child {
+	color: #999;
+	margin-left: 0.2rem;
+}

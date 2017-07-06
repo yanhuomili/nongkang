@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport"/>
+		<title>会员专属</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/huiyuanzhuanshu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<section class="top">会员专属<span class="goBack">返回</span><span class="point"></span></section>
+		</header>
+		<section class="headerFill"></section>
+		<section class="tip">
+			<span>亲爱哒，您还可以重新编辑供货单。</span>
+			<i class="edit">编辑</i>
+		</section>
+		<section class="supplyList">
+			<i class="list"></i><span>供货单列表</span>
+		</section>
+		<section class="shoppingList">
+			<ul>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/hz1.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right shopCar"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/hz1.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right shopCar"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/hz1.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right shopCar"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/hz1.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right shopCar"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/hz1.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right shopCar"></em></p>
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="liWrap">
+						<div class="left pic"><img src="img/hz1.jpg"/></div>
+						<div class="left explain">
+							<p>【山西特产馆】 新鲜水果万荣红富士苹果  箱装 包邮! 6斤(80mm)</p>
+							<p>&yen;<i>:</i>59.9<b>已售201</b><em class="right shopCar"></em></p>
+						</div>
+					</div>	
+				</li>
+			</ul>
+		</section>
+		<!--加入购物车-->
+		<section class="spec">
+			<div class="top pad">
+				<div class="left pic"><img src="img/hz3.jpg"/></div>
+				<div class="left mid">
+					<p>&yen; 25.8<span>库存1020件</span></p>
+					<p>已选择: <i class="selected">256/袋</i></p>
+				</div>
+				<div class="right close"></div>
+			</div>
+			<div class="mid pad">
+				<div class="left food">食品原味</div>
+				<ul class="left weight">
+					<li>120/袋</li>
+					<li>256/袋</li>
+					<li>500/袋</li>
+				</ul>
+			</div>
+			<div class="bot pad">购买数量<p class="right"><i class="reduce"></i><span class="total">1</span><i class="increase"></i></p></div>
+			<div class="operation">
+				<div class="left joinCar">加入购物车</div>
+				<div class="right buyNow">立即购买</div>
+			</div>
+		</section>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+//				//点击购物车打开规格选择界面
+//				$('.shoppingList .shopCar').on('singleTap',function(){
+//					$('.spec').show();
+//				})
+//				//规格选择
+//				$('.guige').on('singleTap',function(){
+//					$('.spec').show();
+//				})
+//				//关闭规格选择
+//				$('.spec .close').on('singleTap',function(){
+//					$('.spec').hide();
+//				})
+//				
+//				//商品重量
+//				$('.weight li').on('singleTap',function(){
+//					$(this).css({'background':'#60af2f','color':'#fff'}).siblings().css({'background':'#fff','color':'#999'})
+//					var val=$(this).html();
+//					$('.selected').html(val)
+////					alert($(this).html())
+//				})
+//				//商品数量
+//				add();
+//				function add(){
+//					var num=0;
+//					$('.increase').on('singleTap',function(){
+//						num++;
+//						$('.total').html(num)
+//						
+//					})
+//					$('.reduce').on('singleTap',function(){
+//						num--;
+//						if(num<=0){
+//							num=0;
+//						}
+//						console.log(num)
+//						$('.total').html(num)
+//					})
+//				}
+//				//加入购物车按钮
+//				$('.joinCar').on('singleTap',function(){
+//					$('.spec').hide();
+//					window.location="shoppingCar.html";
+//				})
+//				//马上购买按钮
+//				$('.buyNow').on('singleTap',function(){
+//					$('.spec').hide();
+//					window.location="orderPay.html";
+//					
+//				})
+
+				
+				$('.shoppingList>ul>li').on('singleTap',function(){
+					window.location="goods-detail.html";
+				})
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>
