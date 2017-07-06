@@ -24,58 +24,11 @@
 		<section class="headerFill"></section>
 		<section class="tip">
 			<p>亲爱哒，您可以添加新的地址哦</p>
-			<span><a href="addAddress.html">添加</a></span>
+			<span class="add"><a href="###">添加</a></span>
 		</section>
 		<section class="receiver">
 			<ul>
-				<li>
-					<dl>
-						<dt>
-							<span>收货人:<i>猫星人</i></span>
-							<span>12345687546</span>
-						</dt>
-						<dd>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c英诺科技</dd>
-					</dl>
-					<div class="editInfo">
-						<div class="defaultAddress"><i></i>默认地址</div>
-						<div class="right">
-							<div class="edit"><a href="editAddress.html">编辑</a></div>
-							<div class="del">删除</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<dl>
-						<dt>
-							<span>收货人:<i>猫星人</i></span>
-							<span>987654321</span>
-						</dt>
-						<dd>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c英诺科技</dd>
-					</dl>
-					<div class="editInfo">
-						<div class="defaultAddress"><i></i>默认地址</div>
-						<div class="right">
-							<div class="edit"><a href="editAddress.html">编辑</a></div>
-							<div class="del">删除</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<dl>
-						<dt>
-							<span>收货人:<i>猫星人</i></span>
-							<span>5555555555</span>
-						</dt>
-						<dd>广东省广州市白云区新市街道云城西路228号M8创意园A栋401c英诺科技</dd>
-					</dl>
-					<div class="editInfo">
-						<div class="defaultAddress"><i></i>默认地址</div>
-						<div class="right">
-							<div class="edit"><a href="editAddress.html">编辑</a></div>
-							<div class="del">删除</div>
-						</div>
-					</div>
-				</li>
+			
 				
 			</ul>
 		</section>
@@ -85,20 +38,104 @@
 		<script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				$('.defaultAddress i').on('singleTap',function(){
-					$(this).addClass('active').parents('li').siblings().find('i').removeClass('active');
+				var arr=[{
+					id:1,
+					user:'喵星人',
+					phone:'123456799',
+					address:'广西藤县古龙镇金坡村',
+					isDefault:0
+				},{
+					id:2,
+					user:'汪星人',
+					phone:'666666666666',
+					address:'广东省广州市白云区m8创意园a栋401c',
+					isDefault:0
+				},{
+					id:3,
+					user:'火星人',
+					phone:'888888888',
+					address:'我家就在火星上面',
+					isDefault:0
+				}];
+				init();//初始化数据
+				function init(){
+					for(var i=0;i<arr.length;i++){
+						var html='<li id="'+arr[i].id+'">'
+							+'<dl>'
+								+'<dt>'
+									+'<span>收货人:<i>'+arr[i].user+'</i></span>'
+									+'<span>'+arr[i].phone+'</span>'
+								+'</dt>'
+								+'<dd>'+arr[i].address+'</dd>'
+							+'</dl>'
+							+'<div class="editInfo">'
+								+'<div class="defaultAddress"><i class="def"></i>默认地址</div>'
+								+'<div class="right">'
+									+'<div class="edit"><a href="editAddress.html">编辑</a></div>'
+									+'<div class="del">删除</div>'
+								+'</div>'
+							+'</div>'
+						+'</li>';
+						$('.receiver ul').append(html)
+					}
+					$('.receiver ul').html()
+				}
+			
+				$('.receiver ul').on('singleTap','i',function(ev){
+					var tar=ev.target;
+					var id=$(tar).parents('li').index();
+					console.log($(tar).parents('li').index())
+					document.cookie="user="+id;
+					if($(tar).hasClass('def')){
+						$(tar).addClass('active').parents('li').siblings().find('.def').removeClass('active');
+					}
+					console.log(document.cookie.user)
 				})
 				
-				
+				var num=3;
+				$('.add').singleTap(function(){
+					n++;
+					arr.push({
+						id:num,
+						user:'汪星人',
+						phone:'666666666666',
+						address:'广东省广州市白云区m8创意园a栋401c',
+						isDefault:0
+					});
+					var len=arr.length;
+					var n=len-1;
+					console.log(len,n)
+					var html='<li id="'+arr[n].id+'">'
+						+'<dl>'
+							+'<dt>'
+								+'<span>收货人:<i>'+arr[n].user+'</i></span>'
+								+'<span>'+arr[n].phone+'</span>'
+							+'</dt>'
+							+'<dd>'+arr[n].address+'</dd>'
+						+'</dl>'
+						+'<div class="editInfo">'
+							+'<div class="defaultAddress"><i class="def"></i>默认地址</div>'
+							+'<div class="right">'
+								+'<div class="edit"><a href="editAddress.html">编辑</a></div>'
+								+'<div class="del">删除</div>'
+							+'</div>'
+						+'</div>'
+					+'</li>';
+					$('.receiver ul').append(html)
+				})
 				//删除
 				delInfo()
 				function delInfo(){
 					var len=$('.receiver li').length;
 					var n;//要删除的地址的序号
-					$('.receiver .del').on('singleTap',function(){
-						n=$(this).parents('li').index();
-						$('.grayLayout').show();
-						console.log(n)
+					$('.receiver').on('singleTap','li',function(ev){
+						var tar=ev.target;
+						if($(tar).hasClass('del')){
+							n=$(tar).parents('li').index();
+							$('.grayLayout').show();
+							console.log(n)
+						}
+						
 					})
 					//取消
 					$('.grayLayout .cancel').on('singleTap',function(){
