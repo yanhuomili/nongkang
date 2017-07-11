@@ -195,12 +195,16 @@
 				onTouchMove: function(swiper){		//手动滑动中触发
 					var _viewHeight = document.getElementsByClassName('swiper-wrapper')[0].offsetHeight;
 					var _contentHeight = document.getElementsByClassName('swiper-slide')[0].offsetHeight;
-					console.log(mySwiper.translate)
+//					console.log(mySwiper.translate)
 					
 					if(mySwiper.translate < 50 && mySwiper.translate > 0) {
 						$(".init-loading").html('下拉刷新...').show();
 					}else if(mySwiper.translate > 50 ){
 						$(".init-loading").html('释放刷新...').show();
+					}
+					if(mySwiper.translate <= _viewHeight - _contentHeight - 100 && mySwiper.translate < 0){
+						console.log(mySwiper.translate)
+						$(".loadtip").html('释放加载...');
 					}
 				},
 				onTouchEnd: function(swiper) {
